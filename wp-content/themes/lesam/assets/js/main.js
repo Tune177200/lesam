@@ -1,0 +1,59 @@
+jQuery(document).ready(function($){
+    
+})
+
+jQuery(".menu ul li a").wrap("<span></span>");
+jQuery(".menu li").find("ul").prev().addClass("hasSub");
+jQuery(".menu li").find("ul").prev().append("<em class='subarrow'></em>");
+jQuery(".menu li").find("ul").wrap("<div class='submn'></div>");
+
+jQuery('.menu .subarrow').each(function() {
+    jQuery(this).on("click", function() {
+        jQuery(this).parent().next().toggleClass('opened');
+        jQuery(this).parent().toggleClass('opened');
+    });
+});
+
+jQuery(".nav-sub li").find("ul").prev().addClass("hasSub");
+
+jQuery('.control-page').each(function() {
+    var currentid = jQuery(this).attr('href');
+    jQuery(this).on("click", function(e) {
+        e.preventDefault();
+        jQuery(this).toggleClass('active-burger');
+        jQuery(currentid).toggleClass('open-sub');
+        jQuery('body').toggleClass('open-page');
+    });
+});	
+
+jQuery(".slick-0-desktop").slick({
+    autoplay: true,
+    autoplaySpeed: 10000,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade:true
+});
+jQuery(".slick-3").slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 700,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '0px',
+    responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 474,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+    ]
+});
