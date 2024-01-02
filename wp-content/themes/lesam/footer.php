@@ -1,3 +1,116 @@
+<div class="section__news intro-home-3">
+    <div class="container">
+
+        <div class="section__news--content text-center mb-5">
+            <h3>BLOG QUÀ TẾT</h3>
+            <p>Tin tức, tư vấn cập nhật từ quà tết Happybox</p>
+        </div>
+
+        <div class="slick-blog">
+
+            <div>
+                <article class="article-blog text-center">
+                    <a href="">
+                        <div class="entry-head">
+                            <img src="https://happybox.vn/wp-content/uploads/2023/12/hop-qua-tethappybox.png" class="entry-thumbnail">
+                            <div class="post-date">
+                                <div class="post-date-day">31</div>
+                                <div class="post-date-month">Th12</div>
+                            </div>
+                        </div>
+                        <h3 class="entry-title">
+                            Quà tặng Tết cho nhân viên ý nghĩa thiết thực mùa Tết 2024
+                        </h3>
+                        <p class="entry-content">
+                            Một món quà Tết ý nghĩa vừa là cách để doanh nghiệp tri ân những đóng góp của tất cả nhân viên suốt một năm qua, vừa khích lệ tinh thần làm việc cho...
+                        </p>
+                    </a>
+                </article>
+            </div>
+
+            <div>
+                <article class="article-blog text-center">
+                    <a href="">
+                        <div class="entry-head">
+                            <img src="https://happybox.vn/wp-content/uploads/2023/12/hop-qua-tethappybox.png" class="entry-thumbnail">
+                            <div class="post-date">
+                                <div class="post-date-day">31</div>
+                                <div class="post-date-month">Th12</div>
+                            </div>
+                        </div>
+                        <h3 class="entry-title">
+                            Quà tặng Tết cho nhân viên ý nghĩa thiết thực mùa Tết 2024
+                        </h3>
+                        <p class="entry-content">
+                            Một món quà Tết ý nghĩa vừa là cách để doanh nghiệp tri ân những đóng góp của tất cả nhân viên suốt một năm qua, vừa khích lệ tinh thần làm việc cho...
+                        </p>
+                    </a>
+                </article>
+            </div>
+
+            <div>
+                <article class="article-blog text-center">
+                    <a href="">
+                        <div class="entry-head">
+                            <img src="https://happybox.vn/wp-content/uploads/2023/12/hop-qua-tethappybox.png" class="entry-thumbnail">
+                            <div class="post-date">
+                                <div class="post-date-day">31</div>
+                                <div class="post-date-month">Th12</div>
+                            </div>
+                        </div>
+                        <h3 class="entry-title">
+                            Quà tặng Tết cho nhân viên ý nghĩa thiết thực mùa Tết 2024
+                        </h3>
+                        <p class="entry-content">
+                            Một món quà Tết ý nghĩa vừa là cách để doanh nghiệp tri ân những đóng góp của tất cả nhân viên suốt một năm qua, vừa khích lệ tinh thần làm việc cho...
+                        </p>
+                    </a>
+                </article>
+            </div>
+
+            <div>
+                <article class="article-blog text-center">
+                    <a href="">
+                        <div class="entry-head">
+                            <img src="https://happybox.vn/wp-content/uploads/2023/12/hop-qua-tethappybox.png" class="entry-thumbnail">
+                            <div class="post-date">
+                                <div class="post-date-day">31</div>
+                                <div class="post-date-month">Th12</div>
+                            </div>
+                        </div>
+                        <h3 class="entry-title">
+                            Quà tặng Tết cho nhân viên ý nghĩa thiết thực mùa Tết 2024
+                        </h3>
+                        <p class="entry-content">
+                            Một món quà Tết ý nghĩa vừa là cách để doanh nghiệp tri ân những đóng góp của tất cả nhân viên suốt một năm qua, vừa khích lệ tinh thần làm việc cho...
+                        </p>
+                    </a>
+                </article>
+            </div>
+
+            <div>
+                <article class="article-blog text-center">
+                    <a href="">
+                        <div class="entry-head">
+                            <img src="https://happybox.vn/wp-content/uploads/2023/12/hop-qua-tethappybox.png" class="entry-thumbnail">
+                            <div class="post-date">
+                                <div class="post-date-day">31</div>
+                                <div class="post-date-month">Th12</div>
+                            </div>
+                        </div>
+                        <h3 class="entry-title">
+                            Quà tặng Tết cho nhân viên ý nghĩa thiết thực mùa Tết 2024
+                        </h3>
+                        <p class="entry-content">
+                            Một món quà Tết ý nghĩa vừa là cách để doanh nghiệp tri ân những đóng góp của tất cả nhân viên suốt một năm qua, vừa khích lệ tinh thần làm việc cho...
+                        </p>
+                    </a>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</div>
 <footer class="footer-container">
     <div class="container">
         <div class="row break-324">

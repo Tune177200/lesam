@@ -57,3 +57,58 @@ jQuery(".slick-3").slick({
         }
     ]
 });
+
+jQuery(".slick-4").slick({
+  autoplay: true,
+  autoplaySpeed: 5000,
+  speed: 700,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+      slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 474,
+      settings: {
+      slidesToShow: 1,
+      }
+    }
+  ]
+});
+
+
+jQuery(".slick-1").slick({
+  autoplay: true,
+  autoplaySpeed: 5000,
+  speed: 700,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+jQuery(".slick-blog").slick({
+  autoplay: true,
+  autoplaySpeed: 5000,
+  speed: 700,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: '0px',
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+      }
+    }
+]
+});
