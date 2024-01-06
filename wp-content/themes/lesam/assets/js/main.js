@@ -112,3 +112,31 @@ jQuery(".slick-blog").slick({
     }
 ]
 });
+
+jQuery(".slick-5").slick({
+  autoplay: true,
+  autoplaySpeed: 2500,
+  speed: 700,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+      slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 640,
+      settings: {
+      slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 474,
+      settings: {
+      slidesToShow: 2,
+      }
+    }
+  ]
+});

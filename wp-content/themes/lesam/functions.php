@@ -28,6 +28,11 @@ if (!function_exists('lesam_theme_setup')) {
     add_action('init', 'lesam_theme_setup');
 }
 
+function mytheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
 if (!function_exists('lesam_menu')) {
     function lesam_menu($menu, $menuClass, $container)
     {
