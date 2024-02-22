@@ -12,7 +12,7 @@
         <div class="container">
             <div class="inner">
                 <div class="logo">
-                    <a href="https://happynuts.vn">
+                    <a href="<?php echo home_url() ?>">
                         <img src="https://happynuts.vn/wp-content/themes/happynut/images/happynut-logo.png" alt="Happynut">
                     </a>
                 </div>
