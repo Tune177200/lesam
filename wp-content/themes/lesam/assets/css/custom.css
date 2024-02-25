@@ -223,3 +223,90 @@ h3.yentu{
     border-radius: 8px;
     border: none;
 }
+
+.block_certificate_page .certif_header{
+    min-height: auto;
+    padding: 30px 0;
+    position: relative;
+    width: 100%;
+}
+
+.block_certificate_page .certif_header{
+    margin-bottom: 30px;
+}
+
+.block_certificate_page .certif_header{
+    background-image: url("../images/gallery/cauchuyenthanhcong.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.block_certificate_page .certif_header .certif_header_text{
+    font-size: 48px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    position: relative;
+}
+
+.block_certificate_page .list_certif {
+    margin-bottom: 50px;
+}
+
+.block_certificate_page .list_certif h3{
+    color: #0a0a0a;
+    font-size: 20px;
+}
+
+.block_certificate_page .list_certif p {
+    font-size: 16px;
+    color: #333;
+    max-width: 850px;
+    margin: auto;
+}
+
+.block_certificate_page .certif_detail {
+    background: #FFF;
+    box-shadow: 0 4px 25px rgba(0,0,0,.15);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.block_certificate_page .certif_detail h3 {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.block_certificate_page .certif_detail .meta {
+    color: #7B7875;
+    font-size: 16px;
+}
+
+.block_certificate_page .certif_detail button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #7B7875;
+}
+
+.block_certificate_page .certif_detail img{
+    transition: filter .6s,opacity .6s,transform .6s,box-shadow .3s;
+}
+
+.block_certificate_page .certif_detail a:hover img{
+    transform: scale(1.1);
+}
+
+.block_certificate_page .see_more {
+    padding: 10px 15px;
+    color:#fff;
+    background : #F15F25;
+    border-radius: 8px;
+    width: max-content;
+    margin: 30px auto;
+    display: block;
+}
