@@ -140,3 +140,58 @@ jQuery(".slick-5").slick({
     }
   ]
 });
+
+jQuery(".slider-vertical").each(function(e){
+  var idSlider = "slider-vertical-"+ e;
+  jQuery(this).attr("id", idSlider);
+  var strIdSlider = "#" + idSlider;
+  jQuery(this).find('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    //adaptiveHeight: true,
+    asNavFor: strIdSlider + ' .slider-nav'
+  });
+  jQuery(this).find('.slider-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: strIdSlider + ' .slider-for',
+    vertical: true,
+    dots: false,
+    arrows: false,
+    //centerMode: true,
+    //adaptiveHeight: true,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          vertical: false,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+          vertical: true,
+        }
+      },
+      {
+        breakpoint: 567,
+        settings: {
+          slidesToShow: 4,
+          vertical: false,
+        }
+      },
+      {
+        breakpoint: 474,
+        settings: {
+          slidesToShow: 3,
+          vertical: false,
+        }
+      }
+    ]
+  });
+});
