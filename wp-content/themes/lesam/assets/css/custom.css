@@ -310,3 +310,153 @@ h3.yentu{
     margin: 30px auto;
     display: block;
 }
+
+section.ss_agency {
+    margin: 30px 0 0 ;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+section.ss_agency form {
+    padding: 26px;
+    background: #216200;
+    border-radius: 16px 16px 0px 0px;
+}
+section.ss_agency form {
+    padding: 26px;
+    background: #216200;
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    width: 100%;
+    gap: 29px;
+    justify-content: end;
+    margin-bottom: 60px;
+}
+
+
+
+.form_group select {
+    margin: 0;
+    background: #FFFFFF;
+    border-radius: 8px;
+    width: 350px;
+    height: 38px;
+    color: #216200;
+    font-weight: 500;
+}
+
+.search-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+
+button.btn-searchform {
+    background-color: #E4FBEC !important;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #216200;
+    margin: 0 !important;
+    height: 38px !important;
+    text-transform: initial;
+    border: none;
+}
+
+.title_home {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #216200;
+}
+
+.box_store .box_image {
+    max-width: 360px;
+    height: 276px;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin: auto;
+}
+
+.box_store .box_image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.box_store .box_text {
+    padding: 16px 28px 19px;
+}
+
+.box_store .box_text a {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #216200;
+    margin-bottom: 12px !important;
+}
+
+.box_store .box_text .agency_map {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.faq_page {
+    margin: 30px 0 0 ;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.faq_page .title {
+    font-size: 32px;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    color: #414141;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 1023px){
+
+    section.ss_agency form {
+        display: block;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+    section.ss_agency form .form_group:nth-child(2), 
+    section.ss_agency form .form_group:nth-child(3) {
+        display: inline-block;
+        margin: 0 15px 15px;
+    }
+
+    .form_group select {
+        width: 172px;
+    }
+
+    .title_home {
+        font-size: 18px;
+    }
+    
+    .box_store {
+        margin-bottom: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 549px) {
+    section.ss_agency form .form_group:nth-child(2), section.ss_agency form .form_group:nth-child(3) {
+        display: inline-block;
+        margin: 0 0 5px;
+    }
+}
