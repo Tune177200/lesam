@@ -1,114 +1,44 @@
+<?php $footer = get_field('footer', 'option'); ?>
 <div class="section__news intro-home-3">
     <div class="container">
 
         <div class="section__news--content text-center mb-5">
-            <h3>BLOG QUÀ TẾT</h3>
-            <p>Tin tức, tư vấn cập nhật từ quà tết Happybox</p>
+            <h3><?php echo $footer['blog']['title'] ?></h3>
+            <p><?php echo $footer['blog']['description'] ?></p>
         </div>
 
-        <div class="slick-blog">
-
-            <div>
-                <article class="article-blog text-center">
-                    <a href="">
-                        <div class="entry-head">
-                            <img src="https://happybox.vn/wp-content/uploads/2023/12/hop-qua-tethappybox.png" class="entry-thumbnail">
-                            <div class="post-date">
-                                <div class="post-date-day">31</div>
-                                <div class="post-date-month">Th12</div>
+        <?php
+        $args = array(
+            'post_type' => 'post',
+            'posts_per_page' => 10,
+            'post_status' => 'publish',
+        );
+        $query = new WP_Query($args);
+        if ($query->have_posts()) {
+            echo '<div class="slick-blog">';
+            while ($query->have_posts()) {
+                $query->the_post(); ?>
+                <div>
+                    <article class="article-blog text-center">
+                        <a href="<?php echo get_permalink(); ?>">
+                            <div class="entry-head">
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="entry-thumbnail">
+                                <div class="post-date">
+                                    <div class="post-date-day"><?php echo get_the_date('d'); ?></div>
+                                    <div class="post-date-month"><?php echo get_the_date('M'); ?></div>
+                                </div>
                             </div>
-                        </div>
-                        <h3 class="entry-title">
-                            Quà tặng Tết cho nhân viên ý nghĩa thiết thực mùa Tết 2024
-                        </h3>
-                        <p class="entry-content">
-                            Một món quà Tết ý nghĩa vừa là cách để doanh nghiệp tri ân những đóng góp của tất cả nhân viên suốt một năm qua, vừa khích lệ tinh thần làm việc cho...
-                        </p>
-                    </a>
-                </article>
-            </div>
-
-            <div>
-                <article class="article-blog text-center">
-                    <a href="">
-                        <div class="entry-head">
-                            <img src="https://happybox.vn/wp-content/uploads/2023/12/hop-qua-tethappybox.png" class="entry-thumbnail">
-                            <div class="post-date">
-                                <div class="post-date-day">31</div>
-                                <div class="post-date-month">Th12</div>
-                            </div>
-                        </div>
-                        <h3 class="entry-title">
-                            Quà tặng Tết cho nhân viên ý nghĩa thiết thực mùa Tết 2024
-                        </h3>
-                        <p class="entry-content">
-                            Một món quà Tết ý nghĩa vừa là cách để doanh nghiệp tri ân những đóng góp của tất cả nhân viên suốt một năm qua, vừa khích lệ tinh thần làm việc cho...
-                        </p>
-                    </a>
-                </article>
-            </div>
-
-            <div>
-                <article class="article-blog text-center">
-                    <a href="">
-                        <div class="entry-head">
-                            <img src="https://happybox.vn/wp-content/uploads/2023/12/hop-qua-tethappybox.png" class="entry-thumbnail">
-                            <div class="post-date">
-                                <div class="post-date-day">31</div>
-                                <div class="post-date-month">Th12</div>
-                            </div>
-                        </div>
-                        <h3 class="entry-title">
-                            Quà tặng Tết cho nhân viên ý nghĩa thiết thực mùa Tết 2024
-                        </h3>
-                        <p class="entry-content">
-                            Một món quà Tết ý nghĩa vừa là cách để doanh nghiệp tri ân những đóng góp của tất cả nhân viên suốt một năm qua, vừa khích lệ tinh thần làm việc cho...
-                        </p>
-                    </a>
-                </article>
-            </div>
-
-            <div>
-                <article class="article-blog text-center">
-                    <a href="">
-                        <div class="entry-head">
-                            <img src="https://happybox.vn/wp-content/uploads/2023/12/hop-qua-tethappybox.png" class="entry-thumbnail">
-                            <div class="post-date">
-                                <div class="post-date-day">31</div>
-                                <div class="post-date-month">Th12</div>
-                            </div>
-                        </div>
-                        <h3 class="entry-title">
-                            Quà tặng Tết cho nhân viên ý nghĩa thiết thực mùa Tết 2024
-                        </h3>
-                        <p class="entry-content">
-                            Một món quà Tết ý nghĩa vừa là cách để doanh nghiệp tri ân những đóng góp của tất cả nhân viên suốt một năm qua, vừa khích lệ tinh thần làm việc cho...
-                        </p>
-                    </a>
-                </article>
-            </div>
-
-            <div>
-                <article class="article-blog text-center">
-                    <a href="">
-                        <div class="entry-head">
-                            <img src="https://happybox.vn/wp-content/uploads/2023/12/hop-qua-tethappybox.png" class="entry-thumbnail">
-                            <div class="post-date">
-                                <div class="post-date-day">31</div>
-                                <div class="post-date-month">Th12</div>
-                            </div>
-                        </div>
-                        <h3 class="entry-title">
-                            Quà tặng Tết cho nhân viên ý nghĩa thiết thực mùa Tết 2024
-                        </h3>
-                        <p class="entry-content">
-                            Một món quà Tết ý nghĩa vừa là cách để doanh nghiệp tri ân những đóng góp của tất cả nhân viên suốt một năm qua, vừa khích lệ tinh thần làm việc cho...
-                        </p>
-                    </a>
-                </article>
-            </div>
-
-        </div>
+                            <h3 class="entry-title"><?php echo get_the_title(); ?></h3>
+                            <p class="entry-content">
+                                <?php echo get_the_excerpt(); ?>
+                            </p>
+                        </a>
+                    </article>
+                </div>
+        <?php }
+            echo '</div>';
+        }
+        ?>
     </div>
 </div>
 <footer class="footer-container">
@@ -116,11 +46,10 @@
         <div class="row break-324">
             <div class="col-xl-3 col-sm-6 sp-col fcol-1">
                 <div class="intro">
-                    <h4>CÔNG TY TNHH<br>
-                        HAPPY NUTS VIỆT NAM</h4>
-                    <address>72 đường số 11, KDC Cityland Park Hills,<br> Phường 10, Quận Gò Vấp, Tp. Hồ Chí Minh</address>
-                    <a target="_blank" href="https://goo.gl/maps/snjMhwb1YjTF1DLw9">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1959.3197822221646!2d106.6632625!3d10.8388709!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175292a26241097%3A0x203aa124126aa53d!2sHappy%20Nuts!5e0!3m2!1sen!2s!4v1669037491650!5m2!1sen!2s" width="240" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h4><?php echo $footer['title']; ?></h4>
+                    <address><?php echo $footer['description']; ?></address>
+                    <a target="_blank" href="<?php echo $footer['link_map']; ?>">
+                        <?php echo $footer['map']; ?>
                     </a>
                 </div>
             </div>
@@ -134,25 +63,25 @@
             </div>
             <div class="col-xl-3 col-sm-6 sp-col fcol-4">
                 <h4>Liên hệ</h4>
-                <ul class="flist">
-                    <li>Phone: (+84) 985 023 463</li>
-                    <li>Email: <a href="mailto:info@happynuts.vn">info@happynuts.vn</a></li>
-                    <li>Website: <a href="htpps://happynuts.vn/">htpps://happynuts.vn</a></li>
-                </ul>
-                <div class="row social">
-                    <div class="col-6 sp-col">
-                        <a href="https://www.facebook.com/happynuts.com.vn" target="_blank"><img src="https://happynuts.vn/wp-content/themes/happynut/images/facebook.jpg" alt="facebook"></a>
-                    </div>
-                    <div class="col-6 sp-col">
-                        <a href="https://www.lazada.vn/shop/happy-nuts-daily-nuts/" target="_blank"><img src="https://happynuts.vn/wp-content/themes/happynut/images/icon-lazada.png" alt="lazada"></a>
-                    </div>
-                    <div class="col-6 sp-col">
-                        <a href="https://shopee.vn/happynuts.daily" target="_blank"><img src="https://happynuts.vn/wp-content/themes/happynut/images/icon-shopee.png" alt="shopee"></a>
-                    </div>
-                    <div class="col-6 sp-col">
-                        <a href="https://tiki.vn/thuong-hieu/happy-nuts.html" target="_blank"><img src="https://happynuts.vn/wp-content/themes/happynut/images/icon-tiki.png" alt="tiki"></a>
-                    </div>
-                </div>
+                <?php
+                if (!empty($footer['list_contact'])) {
+                    echo '<ul class="flist">';
+                    foreach ($footer['list_contact'] as $itemContact) {
+                        echo '<li>' . $itemContact['item'] . '</li>';
+                    }
+                    echo '</ul>';
+                }
+
+                if (!empty($footer['list_ecommerce'])) {
+                    echo '<div class="row social">';
+                    foreach ($footer['list_ecommerce'] as $itemEcommerce) { ?>
+                        <div class="col-6 sp-col">
+                            <a href="<?php echo $itemEcommerce['link'] ?>" target="_blank"><img src="<?php echo $itemEcommerce['icon']['url'] ?>" alt="<?php echo $itemEcommerce['icon']['title'] ?>"></a>
+                        </div>
+                <?php }
+                    echo '</div>';
+                }
+                ?>
             </div>
         </div>
     </div>

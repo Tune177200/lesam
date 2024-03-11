@@ -1904,7 +1904,8 @@ body {
 }
 
 .slick-slider img {
-    display: inline-block
+    display: inline-block;
+    width: 100%
 }
 
 .slick-arrow,.slbtn-prev,.slbtn-next {

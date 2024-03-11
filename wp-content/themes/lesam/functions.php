@@ -90,3 +90,20 @@ function loadStyle(){
     wp_enqueue_script('lightbox-js', get_stylesheet_directory_uri().'/assets/js/lightbox.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'loadStyle');
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+        'page_title'    => 'Theme Settings',
+        'menu_title'    => 'Theme Settings',
+        'menu_slug'     => 'theme-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+
+}
+
+function custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
