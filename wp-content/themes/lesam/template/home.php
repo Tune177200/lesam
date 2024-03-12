@@ -6,86 +6,52 @@
 get_header();
 ?>
 <main>
-    <div class="slick-0-desktop">
-        <div><a href="#"><img src="https://happynuts.vn/wp-content/uploads/2023/10/banner-trangchu-tet_0001_bannertet-copy.jpg" alt=""></a></div>
-        <div><a href="#"><img src="https://happynuts.vn/wp-content/uploads/2023/03/bannerT3-scaled.jpg" alt=""></a></div>
-    </div>
+    <?php
+    $banner = get_field('banner');
 
+    if (!empty($banner['list_banner'])) { ?>
+        <div class="slick-0-desktop">
+            <?php foreach ($banner['list_banner'] as $itemBanner) { ?>
+                <div><a href="<?php echo !empty($itemBanner['link']['url']) ? $itemBanner['link']['url'] : '#' ?>"><img src="<?php echo !empty($itemBanner['banner']['url']) ? $itemBanner['banner']['url'] : '' ?>"></a></div>
+            <?php } ?>
+
+        </div>
+    <?php }
+    $intro_1 = get_field('intro_1');
+    ?>
     <div class="intro-home-1">
         <div class="container main-inner">
             <div class="intro text-center">
-                <h3 class="yentu">trao gửi yêu thương</h3>
-                <h2>HAPPYBOX QUÀ TẶNG LỄ, TẾT, SỰ KIỆN</h2>
-                <p>Lễ, Tết luôn là nét đặc trưng trong văn hoá truyền thống của người Việt, Lễ Tết còn là dịp để gắn kết tình thân gia đình, cũng là cơ hội để các doanh nghiệp quan tâm, thể hiện tình cảm của mình với đối tác và nhân viên bằng những món quà tặng, quà tết, giỏ quà tết , hộp quà tết ý nghĩa.</p>
+                <h3 class="yentu"><?php echo $intro_1['title'] ?></h3>
+                <h2><?php echo $intro_1['sub_title'] ?></h2>
+                <p><?php echo $intro_1['description'] ?></p>
             </div>
-            <ul class="list-term">
-                <li class="list__term--item text-center">
-                    <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/giftbox.png' ?>" alt="">
-                        <div class="list__term--text">
-                            Quà tết
-                        </div>
-                    </a>
-                </li>
+            <?php
+            if (!empty($intro_1['list_category_product'])) { ?>
+                <ul class="list-term">
+                    <?php foreach ($intro_1['list_category_product'] as $itemCat) { ?>
+                        <li class="list__term--item text-center">
+                            <a href="<?php echo !empty($itemCat['link']['url']) ? $itemCat['link']['url'] : '#' ?>">
+                                <img src="<?php echo !empty($itemCat['icon']['url']) ? $itemCat['icon']['url'] : '' ?>" alt="">
+                                <div class="list__term--text">
+                                    <?php echo !empty($itemCat['title']) ? $itemCat['title'] : '' ?>
+                                </div>
+                            </a>
+                        </li>
+                    <?php } ?>
+                </ul>
+            <?php }
+            $information = get_field('information');
+            echo '<div class="tune">';
+            echo '<pre style="background-color: #ddd">';
+            print_r($information);
+            echo '</pre>';
+            echo '</div>';
+            if(!empty($information['list_information'])){
+                
+            }
+            ?>
 
-                <li class="list__term--item text-center">
-                    <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/giftbox.png' ?>" alt="">
-                        <div class="list__term--text">
-                            Quà tết
-                        </div>
-                    </a>
-                </li>
-                <li class="list__term--item text-center">
-                    <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/giftbox.png' ?>" alt="">
-                        <div class="list__term--text">
-                            Quà tết
-                        </div>
-                    </a>
-                </li>
-                <li class="list__term--item text-center">
-                    <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/giftbox.png' ?>" alt="">
-                        <div class="list__term--text">
-                            Quà tết
-                        </div>
-                    </a>
-                </li>
-                <li class="list__term--item text-center">
-                    <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/giftbox.png' ?>" alt="">
-                        <div class="list__term--text">
-                            Quà tết
-                        </div>
-                    </a>
-                </li>
-                <li class="list__term--item text-center">
-                    <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/giftbox.png' ?>" alt="">
-                        <div class="list__term--text">
-                            Quà tết
-                        </div>
-                    </a>
-                </li>
-                <li class="list__term--item text-center">
-                    <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/giftbox.png' ?>" alt="">
-                        <div class="list__term--text">
-                            Quà tết
-                        </div>
-                    </a>
-                </li>
-                <li class="list__term--item text-center">
-                    <a href="">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/giftbox.png' ?>" alt="">
-                        <div class="list__term--text">
-                            Quà tết
-                        </div>
-                    </a>
-                </li>
-
-            </ul>
             <div class="grid-1">
                 <div class="row sp-col-30">
                     <div class="col-md-4 sp-col">
@@ -551,7 +517,7 @@ get_header();
         </div>
     </div>
 
- 
+
 
 </main>
 
