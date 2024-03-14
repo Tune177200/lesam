@@ -42,111 +42,117 @@ get_header();
                 </ul>
             <?php }
             $information = get_field('information');
-            echo '<div class="tune">';
-            echo '<pre style="background-color: #ddd">';
-            print_r($information);
-            echo '</pre>';
-            echo '</div>';
-            if(!empty($information['list_information'])){
-                
-            }
-            ?>
-
-            <div class="grid-1">
-                <div class="row sp-col-30">
-                    <div class="col-md-4 sp-col">
-                        <figure>
-                            <img src="https://happynuts.vn/wp-content/themes/happynut/images/ico-4.png" alt="">
-                        </figure>
-                        <h3>Chất lượng tốt nhất</h3>
-                        <p>Chúng tôi luôn chọn lựa những loại hạt chất lượng nhất trong những loại hạt chất lượng. </p>
-                    </div>
-                    <div class="col-md-4 sp-col">
-                        <figure>
-                            <img src="https://happynuts.vn/wp-content/themes/happynut/images/ico-5.png" alt="">
-                        </figure>
-                        <h3>Nguồn gốc xuất xứ rõ ràng</h3>
-                        <p>Chúng tôi cam kết NÓI KHÔNG với những sản phẩm không rõ nguồn gốc xuất xứ và không có hồ sơ chứng từ đầy đủ.</p>
-                    </div>
-                    <div class="col-md-4 sp-col">
-                        <figure>
-                            <img src="https://happynuts.vn/wp-content/themes/happynut/images/ico-6.png" alt="">
-                        </figure>
-                        <h3>Hướng tới cộng đồng</h3>
-                        <p>Giúp cho đội ngũ CTV bán hàng hiệu quả và tăng thu nhập từ 20 triệu trở lên mỗi tháng</p>
+            if (!empty($information['list_information'])) { ?>
+                <div class="grid-1">
+                    <div class="row sp-col-30">
+                        <?php foreach ($information['list_information'] as $itemInfor) { ?>
+                            <div class="col-md-4 sp-col">
+                                <figure>
+                                    <img src="<?php echo !empty($itemInfor['icon']['url']) ? $itemInfor['icon']['url'] : '' ?>" alt="<?php echo $itemInfor['title'] ?>">
+                                </figure>
+                                <h3><?php echo $itemInfor['title'] ?></h3>
+                                <p><?php echo $itemInfor['description'] ?></p>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
-
+    <?php
+    $intro_2 = get_field('intro_2');
+    // echo '<div class="tutest">';
+    // echo '<pre>';
+    // print_r($intro_2);
+    // echo '</pre>';
+    // echo '</div>';
+    ?>
     <div class="intro-home-3">
         <div class="container">
 
             <div class="intro intro-heading text-center">
-                <h2>Bữa ăn 1 phút</h2>
-                <h3>Cung cấp đầy đủ dinh dưỡng với </h3>
-                <h4>NGŨ CỐC GRANOLA</h4>
+                <h2><?php echo $intro_2['title'] ?></h2>
+                <h3><?php echo $intro_2['sub_title'] ?></h3>
+                <h4><?php echo $intro_2['description'] ?></h4>
                 <br>
             </div>
-            <div class="product-slick">
+            <?php
+            if (!empty($intro_2['product'])) { ?>
+                <div class="product-slick">
+                    <div class="slick-3">
+                        <?php
+                        foreach ($intro_2['product'] as $itemProduct) {
+                            $idProduct = $itemProduct->ID;
+                        ?>
+                            <div>
+                                <article class="article-product text-center">
+                                    <figure><a href="<?php echo get_permalink($idProduct); ?>" tabindex="-1"><img src="<?php echo get_the_post_thumbnail_url($idProduct) ?>" alt="<?php echo get_the_title($idProduct) ?>"></a></figure>
+                                    <div class="product-content">
+                                        <header>
+                                            <h4><a href="<?php echo get_permalink($idProduct); ?>" tabindex="-1"><?php echo get_the_title($idProduct) ?></a></h4>
+                                            <p class="price"><strong>229,000 vnđ</strong></p>
+                                        </header>
+                                        <?php
+                                        if (get_field('trong_luong', $idProduct)) {
+                                            echo '<div class="dscription">Trọng lượng: ' . get_field('trong_luong', $idProduct) . '</div>';
+                                        }
 
+                                        if (get_field('khoi_luong', $idProduct)) {
+                                            echo '<p>Khối lượng: ' . get_field('khoi_luong', $idProduct) . '</p>';
+                                        }
+                                        ?>
 
-                <div class="slick-3">
-                    <div>
-                        <article class="article-product text-center">
-                            <figure><a href="https://happynuts.vn/san-pham/granola-premium-_-vi-dua-2/" tabindex="-1"><img src="https://happynuts.vn/wp-content/uploads/2022/09/Granola_vi_dua_8768.jpg" alt=""></a></figure>
-                            <div class="product-content">
-                                <header>
-                                    <h4><a href="https://happynuts.vn/san-pham/granola-premium-_-vi-dua-2/" tabindex="-1">Premium Granola – Vị Dừa HAPPY NUTS 500gr</a></h4>
-                                    <p class="price"><strong>229,000 vnđ</strong></p>
-                                </header>
-                                <div class="dscription">Trọng lượng: 500gr</div>
-                                <p>Khối lượng: gr</p>
+                                    </div>
+                                    <a href="#" value="<?php echo $idProduct; ?>" class="single_add_to_cart_button" data-product_id="<?php echo $idProduct; ?>" data-product_sku="" aria-label="Add “<?php echo get_the_title($idProduct) ?>” to your cart" tabindex="-1">
+                                        <div class="bag"></div>
+                                    </a>
+                                </article>
                             </div>
-                            <a href="#" value="347" class="single_add_to_cart_button" data-product_id="347" data-product_sku="" aria-label="Add “Premium Granola – Vị Dừa HAPPY NUTS 500gr” to your cart" tabindex="-1">
-                                <div class="bag"></div>
-                            </a>
-                        </article>
+                        <?php }
+                        ?>
+
+                        <!-- 
+                        <div>
+                            <article class="article-product text-center">
+                                <figure><a href="https://happynuts.vn/san-pham/granola-premium-_-vi-nho/" tabindex="-1"><img src="https://happynuts.vn/wp-content/uploads/2022/09/Granola_vi_nho__0004_IMG_8807.jpg" alt=""></a></figure>
+                                <div class="product-content">
+                                    <header>
+                                        <h4><a href="https://happynuts.vn/san-pham/granola-premium-_-vi-nho/" tabindex="-1">Premium Granola – Vị Nho HAPPY NUTS 500gr</a></h4>
+                                        <p class="price"><strong>229,000 vnđ</strong></p>
+                                    </header>
+                                    <div class="dscription">Trọng lượng: 500gr</div>
+                                    <p>Khối lượng: gr</p>
+                                </div>
+                                <a href="#" value="215" class="single_add_to_cart_button" data-product_id="215" data-product_sku="" aria-label="Add “Premium Granola – Vị Nho HAPPY NUTS 500gr” to your cart" tabindex="-1">
+                                    <div class="bag"></div>
+                                </a>
+                                <img class="img-best-saller" src="https://happynuts.vn/wp-content/themes/happynut/images/icon-best-seller.png">
+                            </article>
+                        </div>
+
+                        <div>
+                            <article class="article-product text-center">
+                                <figure><a href="https://happynuts.vn/san-pham/granola-premium-_-vi-xoai/" tabindex="-1"><img src="https://happynuts.vn/wp-content/uploads/2022/09/Granola_vi_xoai__0004_IMG_8808.jpg" alt=""></a></figure>
+                                <div class="product-content">
+                                    <header>
+                                        <h4><a href="https://happynuts.vn/san-pham/granola-premium-_-vi-xoai/" tabindex="-1">Premium Granola – Vị Xoài HAPPY NUTS 500gr</a></h4>
+                                        <p class="price"><strong>229,000 vnđ</strong></p>
+                                    </header>
+                                    <div class="dscription">Trọng lượng: 500gr</div>
+                                    <p>Khối lượng: gr</p>
+                                </div>
+                                <a href="#" value="213" class="single_add_to_cart_button" data-product_id="213" data-product_sku="" aria-label="Add “Premium Granola – Vị Xoài HAPPY NUTS 500gr” to your cart" tabindex="-1">
+                                    <div class="bag"></div>
+                                </a>
+                            </article>
+                        </div> -->
                     </div>
 
-                    <div>
-                        <article class="article-product text-center">
-                            <figure><a href="https://happynuts.vn/san-pham/granola-premium-_-vi-nho/" tabindex="-1"><img src="https://happynuts.vn/wp-content/uploads/2022/09/Granola_vi_nho__0004_IMG_8807.jpg" alt=""></a></figure>
-                            <div class="product-content">
-                                <header>
-                                    <h4><a href="https://happynuts.vn/san-pham/granola-premium-_-vi-nho/" tabindex="-1">Premium Granola – Vị Nho HAPPY NUTS 500gr</a></h4>
-                                    <p class="price"><strong>229,000 vnđ</strong></p>
-                                </header>
-                                <div class="dscription">Trọng lượng: 500gr</div>
-                                <p>Khối lượng: gr</p>
-                            </div>
-                            <a href="#" value="215" class="single_add_to_cart_button" data-product_id="215" data-product_sku="" aria-label="Add “Premium Granola – Vị Nho HAPPY NUTS 500gr” to your cart" tabindex="-1">
-                                <div class="bag"></div>
-                            </a>
-                            <img class="img-best-saller" src="https://happynuts.vn/wp-content/themes/happynut/images/icon-best-seller.png">
-                        </article>
-                    </div>
-                    <div>
-                        <article class="article-product text-center">
-                            <figure><a href="https://happynuts.vn/san-pham/granola-premium-_-vi-xoai/" tabindex="-1"><img src="https://happynuts.vn/wp-content/uploads/2022/09/Granola_vi_xoai__0004_IMG_8808.jpg" alt=""></a></figure>
-                            <div class="product-content">
-                                <header>
-                                    <h4><a href="https://happynuts.vn/san-pham/granola-premium-_-vi-xoai/" tabindex="-1">Premium Granola – Vị Xoài HAPPY NUTS 500gr</a></h4>
-                                    <p class="price"><strong>229,000 vnđ</strong></p>
-                                </header>
-                                <div class="dscription">Trọng lượng: 500gr</div>
-                                <p>Khối lượng: gr</p>
-                            </div>
-                            <a href="#" value="213" class="single_add_to_cart_button" data-product_id="213" data-product_sku="" aria-label="Add “Premium Granola – Vị Xoài HAPPY NUTS 500gr” to your cart" tabindex="-1">
-                                <div class="bag"></div>
-                            </a>
-                        </article>
-                    </div>
+
                 </div>
+            <?php }
+            ?>
 
-
-            </div>
         </div>
     </div>
 
