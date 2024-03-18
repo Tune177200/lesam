@@ -76,15 +76,17 @@ function pagination_lesam($query)
 //             'paged' => $paged,
 
 function loadStyle(){
-    wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');
+    wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css');
     wp_enqueue_style('slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
     wp_enqueue_style('main-css', get_stylesheet_directory_uri().'/assets/css/main.css');
     wp_enqueue_style('lightbox-css', get_stylesheet_directory_uri().'/assets/css/lightbox.css');
     wp_enqueue_style('custom-css', get_stylesheet_directory_uri().'/assets/css/custom.css');
 
-    wp_enqueue_script('popper-js', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js', array('jquery'), null, true);
-    wp_enqueue_script('bootstrap-bundle-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', array('jquery'), null, true);
-    wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js', array('jquery'), null, true);
+    wp_enqueue_script('jquery-js', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array('jquery'), null, true);
+    wp_enqueue_script('jquery-bootstrap', 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js', array('jquery'), null, true);
+    wp_enqueue_script('bootstrap-bundle-js', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js', array('jquery'), null, true);
+    wp_enqueue_script('popper-js', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', array('jquery'), null, true);
+    wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js', array('jquery'), null, true);
     wp_enqueue_script('slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
     wp_enqueue_script('main-js', get_stylesheet_directory_uri().'/assets/js/main.js', array('jquery'), null, true);
     wp_enqueue_script('lightbox-js', get_stylesheet_directory_uri().'/assets/js/lightbox.js', array('jquery'), null, true);
@@ -107,3 +109,25 @@ function custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function creatPostType(){
+
+    $args = array(
+
+        'labels' => array(
+            'name' => 'Đại Lý',
+            'singular_name' => 'Đại Lý'
+        ),
+        'public' => true,
+        'supports' => array(
+            'title',
+            'revisions',
+            'thumbnail'
+        )
+
+    );
+
+    register_post_type('dai-ly', $args);
+
+}
+add_action('init', 'creatPostType');

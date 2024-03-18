@@ -57,72 +57,6 @@
         </div>
     </div>-->
 
-    <!-- Chứng chỉ  -->
-    <!-- <div class="block_certificate_page">
-        <div class="certif_header">
-            <div class="certif_header_text">
-                <h1>CHỨNG CHỈ & CHỨNG NHẬN</h1>
-            </div>
-        </div>
-        <div class="container">
-            <div class="list_certif">
-                <h3 class="text-center">Chứng chỉ của chúng tôi</h3>
-                <p class="text-center">Vì sức khỏe cộng đồng, muốn mang đến cho người dùng Việt kiến thức dinh dưỡng và dòng hạt cao cấp, chất lượng cao nhất. Happy Nuts đem đến những sản phẩm hạt dinh dưỡng chất lượng tốt nhất trong các sản phẩm tốt. Với nguồn gốc xuất xứ rõ ràng, tốt và an toàn cho sức khỏe người dùng.</p>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="certif_detail">
-                        <a href="https://happynuts.vn/wp-content/uploads/2022/09/Group-4465.png" data-lightbox="ct-1">
-                            <img src="https://happynuts.vn/wp-content/uploads/2022/09/Group-4465.png" alt="">
-                        </a>
-                        <div>
-                            <h3 class="text-center">Chứng chỉ sản phẩm sàn gỗ  Châu Âu Egger</h3>
-                            <div class="d-flex align-center justify-content-between meta">
-                                <div class="date d-flex align-items-center">
-                                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M3.1162 0.959106C2.87026 0.959106 2.6709 1.15847 2.6709 1.40441V2.295H3.56148V1.40441C3.56148 1.15847 3.36212 0.959106 3.1162 0.959106Z" fill="#0C8543"></path> <path d="M9.35156 0.959106C9.10562 0.959106 8.90625 1.15847 8.90625 1.40441V2.295H9.79684V1.40441C9.79686 1.15847 9.5975 0.959106 9.35156 0.959106Z" fill="#0C8543"></path> <path d="M11.1324 2.29529H9.79655V4.07649C9.79655 4.32243 9.59718 4.52179 9.35124 4.52179C9.1053 4.52179 8.90594 4.32243 8.90594 4.07649V2.29529H3.56237V4.07649C3.56237 4.32243 3.363 4.52179 3.11706 4.52179C2.87112 4.52179 2.67176 4.32243 2.67176 4.07649V2.29529H1.33589C0.598099 2.29529 0 2.89339 0 3.63118V12.0918C0 12.8296 0.598099 13.4277 1.33589 13.4277H11.1324C11.8702 13.4277 12.4683 12.8296 12.4683 12.0918V3.63118C12.4683 2.89339 11.8702 2.29529 11.1324 2.29529ZM11.5777 12.0918C11.5777 12.3378 11.3784 12.5371 11.1324 12.5371H1.33589C1.08995 12.5371 0.890586 12.3378 0.890586 12.0918V6.30296H11.5777V12.0918Z" fill="#0C8543"></path> <path d="M3.56441 7.19287H2.67382C2.42788 7.19287 2.22852 7.39224 2.22852 7.63818C2.22852 7.88412 2.42788 8.08348 2.67382 8.08348H3.56441C3.81035 8.08348 4.00971 7.88412 4.00971 7.63818C4.00971 7.39224 3.81035 7.19287 3.56441 7.19287Z" fill="#0C8543"></path> <path d="M6.68062 7.19312H5.79003C5.54409 7.19312 5.34473 7.39248 5.34473 7.63842C5.34473 7.88436 5.54409 8.08373 5.79003 8.08373H6.68062C6.92656 8.08373 7.12592 7.88436 7.12592 7.63842C7.12592 7.39248 6.92656 7.19312 6.68062 7.19312Z" fill="#0C8543"></path> <path d="M9.79585 7.19312H8.90527C8.65933 7.19312 8.45996 7.39248 8.45996 7.63842C8.45996 7.88436 8.65933 8.08373 8.90527 8.08373H9.79585C10.0418 8.08373 10.2412 7.88436 10.2412 7.63842C10.2412 7.39248 10.0418 7.19312 9.79585 7.19312Z" fill="#0C8543"></path> <path d="M3.56441 8.97437H2.67382C2.42788 8.97437 2.22852 9.17373 2.22852 9.41967C2.22852 9.66561 2.42788 9.86498 2.67382 9.86498H3.56441C3.81035 9.86498 4.00971 9.66561 4.00971 9.41967C4.00971 9.17373 3.81035 8.97437 3.56441 8.97437Z" fill="#0C8543"></path> <path d="M6.68062 8.97437H5.79003C5.54409 8.97437 5.34473 9.17373 5.34473 9.41967C5.34473 9.66561 5.54409 9.86498 5.79003 9.86498H6.68062C6.92656 9.86498 7.12592 9.66561 7.12592 9.41967C7.12592 9.17373 6.92656 8.97437 6.68062 8.97437Z" fill="#0C8543"></path> <path d="M9.79585 8.97437H8.90527C8.65933 8.97437 8.45996 9.17373 8.45996 9.41967C8.45996 9.66561 8.65933 9.86498 8.90527 9.86498H9.79585C10.0418 9.86498 10.2412 9.66561 10.2412 9.41967C10.2411 9.17373 10.0418 8.97437 9.79585 8.97437Z" fill="#0C8543"></path> <path d="M3.56441 10.7555H2.67382C2.42788 10.7555 2.22852 10.9549 2.22852 11.2008C2.22852 11.4467 2.42788 11.6461 2.67382 11.6461H3.56441C3.81035 11.6461 4.00971 11.4467 4.00971 11.2008C4.00971 10.9548 3.81035 10.7555 3.56441 10.7555Z" fill="#0C8543"></path> <path d="M6.68062 10.7557H5.79003C5.54409 10.7557 5.34473 10.9551 5.34473 11.201C5.34473 11.447 5.54409 11.6463 5.79003 11.6463H6.68062C6.92656 11.6463 7.12592 11.447 7.12592 11.201C7.12592 10.9551 6.92656 10.7557 6.68062 10.7557Z" fill="#0C8543"></path> <path d="M9.79585 10.7557H8.90527C8.65933 10.7557 8.45996 10.9551 8.45996 11.201C8.45996 11.447 8.65933 11.6463 8.90527 11.6463H9.79585C10.0418 11.6463 10.2412 11.447 10.2412 11.201C10.2412 10.9551 10.0418 10.7557 9.79585 10.7557Z" fill="#0C8543"></path> </svg>
-                                        18/11/2022
-                                </div>
-
-                                <div class="download d-flex align-items-center">
-                                    <button download="">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7731 9.49889C13.6217 9.34741 13.4376 9.27161 13.2213 9.27161H9.45469L8.35074 10.3755C8.03686 10.6785 7.66889 10.8301 7.2468 10.8301C6.82479 10.8301 6.45671 10.6787 6.14285 10.3755L5.04701 9.27161H1.27242C1.056 9.27161 0.872016 9.34749 0.720447 9.49889C0.568906 9.65037 0.493164 9.83438 0.493164 10.0509V12.6484C0.493164 12.8649 0.568906 13.0489 0.720447 13.2004C0.871988 13.3519 1.05597 13.4276 1.27242 13.4276H13.2213C13.4377 13.4276 13.6218 13.3519 13.7731 13.2004C13.9247 13.0489 14.0004 12.8649 14.0004 12.6484V10.0509C14.0004 9.83438 13.9247 9.65037 13.7731 9.49889ZM10.7293 12.2344C10.6263 12.3373 10.5045 12.3886 10.3638 12.3886C10.2231 12.3886 10.1015 12.3373 9.99856 12.2344C9.89581 12.1316 9.84443 12.0099 9.84443 11.8692C9.84443 11.7286 9.89581 11.6066 9.99856 11.504C10.1015 11.4011 10.2231 11.3496 10.3638 11.3496C10.5045 11.3496 10.6263 11.4011 10.7293 11.504C10.832 11.6066 10.8834 11.7285 10.8834 11.8692C10.8834 12.0098 10.832 12.1316 10.7293 12.2344ZM12.8072 12.2344C12.7044 12.3373 12.5826 12.3886 12.4419 12.3886C12.3012 12.3886 12.1795 12.3373 12.0766 12.2344C11.9739 12.1316 11.9225 12.0099 11.9225 11.8692C11.9225 11.7286 11.9739 11.6066 12.0766 11.504C12.1795 11.4011 12.3012 11.3496 12.4419 11.3496C12.5826 11.3496 12.7044 11.4011 12.8072 11.504C12.91 11.6066 12.9615 11.7285 12.9615 11.8692C12.9615 12.0098 12.9101 12.1316 12.8072 12.2344Z" fill="#0C8543"></path> <path d="M6.88122 9.63671C6.97868 9.73944 7.10042 9.79084 7.24648 9.79084C7.39265 9.79084 7.51425 9.73944 7.61174 9.63671L11.2484 6.00007C11.4161 5.84316 11.454 5.65372 11.362 5.43184C11.2702 5.22085 11.1105 5.11533 10.8831 5.11522H8.80499V1.47864C8.80499 1.33796 8.7535 1.21619 8.65086 1.11338C8.54794 1.01054 8.42622 0.959106 8.2856 0.959106H6.20736C6.06673 0.959106 5.94496 1.01054 5.84209 1.11338C5.73931 1.21619 5.68788 1.33793 5.68788 1.47864V5.11525H3.60984C3.38244 5.11525 3.22288 5.22087 3.13088 5.43186C3.03893 5.65366 3.07677 5.84319 3.24458 6.0001L6.88122 9.63671Z" fill="#0C8543"></path> </svg>
-                                        9
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="certif_detail">
-                        <a href="https://happynuts.vn/wp-content/uploads/2022/09/Group-4463.png" data-lightbox="ct-2">
-                            <img src="https://happynuts.vn/wp-content/uploads/2022/09/Group-4463.png" alt="">
-                        </a>
-                        <div>
-                            <h3 class="text-center">Chứng chỉ sản phẩm sàn gỗ  Châu Âu Egger</h3>
-                            <div class="d-flex align-center justify-content-between meta">
-                                <div class="date d-flex align-items-center">
-                                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M3.1162 0.959106C2.87026 0.959106 2.6709 1.15847 2.6709 1.40441V2.295H3.56148V1.40441C3.56148 1.15847 3.36212 0.959106 3.1162 0.959106Z" fill="#0C8543"></path> <path d="M9.35156 0.959106C9.10562 0.959106 8.90625 1.15847 8.90625 1.40441V2.295H9.79684V1.40441C9.79686 1.15847 9.5975 0.959106 9.35156 0.959106Z" fill="#0C8543"></path> <path d="M11.1324 2.29529H9.79655V4.07649C9.79655 4.32243 9.59718 4.52179 9.35124 4.52179C9.1053 4.52179 8.90594 4.32243 8.90594 4.07649V2.29529H3.56237V4.07649C3.56237 4.32243 3.363 4.52179 3.11706 4.52179C2.87112 4.52179 2.67176 4.32243 2.67176 4.07649V2.29529H1.33589C0.598099 2.29529 0 2.89339 0 3.63118V12.0918C0 12.8296 0.598099 13.4277 1.33589 13.4277H11.1324C11.8702 13.4277 12.4683 12.8296 12.4683 12.0918V3.63118C12.4683 2.89339 11.8702 2.29529 11.1324 2.29529ZM11.5777 12.0918C11.5777 12.3378 11.3784 12.5371 11.1324 12.5371H1.33589C1.08995 12.5371 0.890586 12.3378 0.890586 12.0918V6.30296H11.5777V12.0918Z" fill="#0C8543"></path> <path d="M3.56441 7.19287H2.67382C2.42788 7.19287 2.22852 7.39224 2.22852 7.63818C2.22852 7.88412 2.42788 8.08348 2.67382 8.08348H3.56441C3.81035 8.08348 4.00971 7.88412 4.00971 7.63818C4.00971 7.39224 3.81035 7.19287 3.56441 7.19287Z" fill="#0C8543"></path> <path d="M6.68062 7.19312H5.79003C5.54409 7.19312 5.34473 7.39248 5.34473 7.63842C5.34473 7.88436 5.54409 8.08373 5.79003 8.08373H6.68062C6.92656 8.08373 7.12592 7.88436 7.12592 7.63842C7.12592 7.39248 6.92656 7.19312 6.68062 7.19312Z" fill="#0C8543"></path> <path d="M9.79585 7.19312H8.90527C8.65933 7.19312 8.45996 7.39248 8.45996 7.63842C8.45996 7.88436 8.65933 8.08373 8.90527 8.08373H9.79585C10.0418 8.08373 10.2412 7.88436 10.2412 7.63842C10.2412 7.39248 10.0418 7.19312 9.79585 7.19312Z" fill="#0C8543"></path> <path d="M3.56441 8.97437H2.67382C2.42788 8.97437 2.22852 9.17373 2.22852 9.41967C2.22852 9.66561 2.42788 9.86498 2.67382 9.86498H3.56441C3.81035 9.86498 4.00971 9.66561 4.00971 9.41967C4.00971 9.17373 3.81035 8.97437 3.56441 8.97437Z" fill="#0C8543"></path> <path d="M6.68062 8.97437H5.79003C5.54409 8.97437 5.34473 9.17373 5.34473 9.41967C5.34473 9.66561 5.54409 9.86498 5.79003 9.86498H6.68062C6.92656 9.86498 7.12592 9.66561 7.12592 9.41967C7.12592 9.17373 6.92656 8.97437 6.68062 8.97437Z" fill="#0C8543"></path> <path d="M9.79585 8.97437H8.90527C8.65933 8.97437 8.45996 9.17373 8.45996 9.41967C8.45996 9.66561 8.65933 9.86498 8.90527 9.86498H9.79585C10.0418 9.86498 10.2412 9.66561 10.2412 9.41967C10.2411 9.17373 10.0418 8.97437 9.79585 8.97437Z" fill="#0C8543"></path> <path d="M3.56441 10.7555H2.67382C2.42788 10.7555 2.22852 10.9549 2.22852 11.2008C2.22852 11.4467 2.42788 11.6461 2.67382 11.6461H3.56441C3.81035 11.6461 4.00971 11.4467 4.00971 11.2008C4.00971 10.9548 3.81035 10.7555 3.56441 10.7555Z" fill="#0C8543"></path> <path d="M6.68062 10.7557H5.79003C5.54409 10.7557 5.34473 10.9551 5.34473 11.201C5.34473 11.447 5.54409 11.6463 5.79003 11.6463H6.68062C6.92656 11.6463 7.12592 11.447 7.12592 11.201C7.12592 10.9551 6.92656 10.7557 6.68062 10.7557Z" fill="#0C8543"></path> <path d="M9.79585 10.7557H8.90527C8.65933 10.7557 8.45996 10.9551 8.45996 11.201C8.45996 11.447 8.65933 11.6463 8.90527 11.6463H9.79585C10.0418 11.6463 10.2412 11.447 10.2412 11.201C10.2412 10.9551 10.0418 10.7557 9.79585 10.7557Z" fill="#0C8543"></path> </svg>
-                                    18/11/2022
-                                </div>
-
-                                <div class="download d-flex align-items-center">
-                                    <button download="">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7731 9.49889C13.6217 9.34741 13.4376 9.27161 13.2213 9.27161H9.45469L8.35074 10.3755C8.03686 10.6785 7.66889 10.8301 7.2468 10.8301C6.82479 10.8301 6.45671 10.6787 6.14285 10.3755L5.04701 9.27161H1.27242C1.056 9.27161 0.872016 9.34749 0.720447 9.49889C0.568906 9.65037 0.493164 9.83438 0.493164 10.0509V12.6484C0.493164 12.8649 0.568906 13.0489 0.720447 13.2004C0.871988 13.3519 1.05597 13.4276 1.27242 13.4276H13.2213C13.4377 13.4276 13.6218 13.3519 13.7731 13.2004C13.9247 13.0489 14.0004 12.8649 14.0004 12.6484V10.0509C14.0004 9.83438 13.9247 9.65037 13.7731 9.49889ZM10.7293 12.2344C10.6263 12.3373 10.5045 12.3886 10.3638 12.3886C10.2231 12.3886 10.1015 12.3373 9.99856 12.2344C9.89581 12.1316 9.84443 12.0099 9.84443 11.8692C9.84443 11.7286 9.89581 11.6066 9.99856 11.504C10.1015 11.4011 10.2231 11.3496 10.3638 11.3496C10.5045 11.3496 10.6263 11.4011 10.7293 11.504C10.832 11.6066 10.8834 11.7285 10.8834 11.8692C10.8834 12.0098 10.832 12.1316 10.7293 12.2344ZM12.8072 12.2344C12.7044 12.3373 12.5826 12.3886 12.4419 12.3886C12.3012 12.3886 12.1795 12.3373 12.0766 12.2344C11.9739 12.1316 11.9225 12.0099 11.9225 11.8692C11.9225 11.7286 11.9739 11.6066 12.0766 11.504C12.1795 11.4011 12.3012 11.3496 12.4419 11.3496C12.5826 11.3496 12.7044 11.4011 12.8072 11.504C12.91 11.6066 12.9615 11.7285 12.9615 11.8692C12.9615 12.0098 12.9101 12.1316 12.8072 12.2344Z" fill="#0C8543"></path> <path d="M6.88122 9.63671C6.97868 9.73944 7.10042 9.79084 7.24648 9.79084C7.39265 9.79084 7.51425 9.73944 7.61174 9.63671L11.2484 6.00007C11.4161 5.84316 11.454 5.65372 11.362 5.43184C11.2702 5.22085 11.1105 5.11533 10.8831 5.11522H8.80499V1.47864C8.80499 1.33796 8.7535 1.21619 8.65086 1.11338C8.54794 1.01054 8.42622 0.959106 8.2856 0.959106H6.20736C6.06673 0.959106 5.94496 1.01054 5.84209 1.11338C5.73931 1.21619 5.68788 1.33793 5.68788 1.47864V5.11525H3.60984C3.38244 5.11525 3.22288 5.22087 3.13088 5.43186C3.03893 5.65366 3.07677 5.84319 3.24458 6.0001L6.88122 9.63671Z" fill="#0C8543"></path> </svg>
-                                        9
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="btn see_more">
-                Xem thêm
-            </a>
-        </div>
-    </div> -->
-
 
     <!-- Detail sản phẩm -->
     <!-- <div class="tempt-8">
@@ -405,7 +339,7 @@
 
 
     <!-- Cửa hàng -->
-    <!-- <div class="container">
+    <div class="container">
         <section class="ss_agency">
             <form action="/tim-kiem/" method="GET">
                 <div class="form_group form_title">
@@ -479,57 +413,10 @@
                 </div>
         </section>
 
-    </div> -->
-
-    <!-- FAQ  -->
-    <div class="container">
-        <div class="faq_page">
-            <div class="title">
-                FAQ
-            </div>
-            <div>
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Accordion Item #1
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Accordion Item #2
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Accordion Item #3
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
 
+
 </main>
+
 <?php get_footer(); ?>
