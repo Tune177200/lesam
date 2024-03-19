@@ -390,7 +390,7 @@ button.btn-searchform {
     padding: 16px 28px 19px;
 }
 
-.box_store .box_text a {
+.box_store .box_text h4 {
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
@@ -424,7 +424,30 @@ button.btn-searchform {
     margin-bottom: 20px;
 }
 
+.pagination{
+    padding: 15px 0;
+}
+.page-item.active .page-link{
+    background-color: #216200;
+    border-color: #216200;
+}
+.list-contact {
+    list-style-type: none;
+    padding: 0;
+}
 
+.list-contact li {
+    margin: 20px 0;
+}
+
+.list-contact li a {
+    display: flex;
+    align-items: center;
+}
+
+.list-contact li a span {
+    margin-left: 15px;
+}
 @media (max-width: 1023px){
 
     section.ss_agency form {

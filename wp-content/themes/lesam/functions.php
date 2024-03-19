@@ -28,10 +28,11 @@ if (!function_exists('lesam_theme_setup')) {
     add_action('init', 'lesam_theme_setup');
 }
 
-function mytheme_add_woocommerce_support() {
-	add_theme_support( 'woocommerce' );
+function mytheme_add_woocommerce_support()
+{
+    add_theme_support('woocommerce');
 }
-add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
 
 if (!function_exists('lesam_menu')) {
     function lesam_menu($menu, $menuClass, $container)
@@ -75,12 +76,13 @@ function pagination_lesam($query)
 // 'posts_per_page' => $wp_query->query_vars['posts_per_page'],
 //             'paged' => $paged,
 
-function loadStyle(){
+function loadStyle()
+{
     wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css');
     wp_enqueue_style('slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
-    wp_enqueue_style('main-css', get_stylesheet_directory_uri().'/assets/css/main.css');
-    wp_enqueue_style('lightbox-css', get_stylesheet_directory_uri().'/assets/css/lightbox.css');
-    wp_enqueue_style('custom-css', get_stylesheet_directory_uri().'/assets/css/custom.css');
+    wp_enqueue_style('main-css', get_stylesheet_directory_uri() . '/assets/css/main.css');
+    wp_enqueue_style('lightbox-css', get_stylesheet_directory_uri() . '/assets/css/lightbox.css');
+    wp_enqueue_style('custom-css', get_stylesheet_directory_uri() . '/assets/css/custom.css');
 
     wp_enqueue_script('jquery-js', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array('jquery'), null, true);
     wp_enqueue_script('jquery-bootstrap', 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js', array('jquery'), null, true);
@@ -88,12 +90,14 @@ function loadStyle(){
     wp_enqueue_script('popper-js', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', array('jquery'), null, true);
     wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js', array('jquery'), null, true);
     wp_enqueue_script('slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
-    wp_enqueue_script('main-js', get_stylesheet_directory_uri().'/assets/js/main.js', array('jquery'), null, true);
-    wp_enqueue_script('lightbox-js', get_stylesheet_directory_uri().'/assets/js/lightbox.js', array('jquery'), null, true);
+    wp_enqueue_script('main-js', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), null, true);
+    wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/assets/js/custom.js', array('jquery'), null, true);
+    wp_localize_script('custom-js', 'frontendajax', array('ajaxurl' => admin_url('admin-ajax.php'), 'jsonURL' => get_stylesheet_directory_uri() . '/assets/json/huyen_data.json'));
+    wp_enqueue_script('lightbox-js', get_stylesheet_directory_uri() . '/assets/js/lightbox.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'loadStyle');
 
-if( function_exists('acf_add_options_page') ) {
+if (function_exists('acf_add_options_page')) {
 
     acf_add_options_page(array(
         'page_title'    => 'Theme Settings',
@@ -102,15 +106,16 @@ if( function_exists('acf_add_options_page') ) {
         'capability'    => 'edit_posts',
         'redirect'      => false
     ));
-
 }
 
-function custom_excerpt_length( $length ) {
+function custom_excerpt_length($length)
+{
     return 20;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
-function creatPostType(){
+function creatPostType()
+{
 
     $args = array(
 
@@ -128,6 +133,70 @@ function creatPostType(){
     );
 
     register_post_type('dai-ly', $args);
-
 }
 add_action('init', 'creatPostType');
+
+function custom_taxonomy()
+{
+    register_taxonomy(
+        'tinh_thanh_pho',
+        'dai-ly',
+        array(
+            'label' => 'Tỉnh, Thành Phố',
+            'rewrite' => array('slug' => 'tinh-thanh-pho'),
+            'hierarchical' => true,
+        )
+    );
+}
+add_action('init', 'custom_taxonomy');
+
+
+// // Tạo Endpoint AJAX
+// add_action( 'wp_ajax_get_districts_by_province', 'get_districts_by_province' );
+// add_action( 'wp_ajax_nopriv_get_districts_by_province', 'get_districts_by_province' );
+
+// function get_districts_by_province() {
+//     $province_id = $_POST['province_id'];
+//     // Thực hiện truy vấn để lấy danh sách quận huyện dựa trên tỉnh thành
+//     // Trả về danh sách quận huyện dưới dạng JSON
+//     wp_send_json($districts);
+// }
+
+function bootstrap_pagination()
+{
+    global $wp_query;
+    $big = 999999999;
+    $listString = paginate_links(array(
+        'base' => str_replace($big, '%#%', get_pagenum_link($big)),
+        'format' => '?paged=%#%',
+        'current' => max(1, get_query_var('paged')),
+        'total' => $wp_query->max_num_pages,
+        'prev_text'    => __('← Previous'),
+        'next_text'    => __('Next  →'),
+        'type'  => 'list',
+
+    ));
+
+    $listString = str_replace("<ul class='page-numbers'>", '<ul class="pagination">', $listString);
+    $listString = str_replace('page-numbers', 'page-link', $listString);
+    $listString = str_replace('<li>', '<li class="page-item">', $listString);
+    $listString = str_replace(
+        '<li class="page-item"><span aria-current="page" class="page-link current">',
+        '<li class="page-item active"><span aria-current="page" class="page-link">',
+        $listString
+    );
+
+
+    echo $listString;
+}
+
+add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
+function change_existing_currency_symbol($currency_symbol, $currency)
+{
+    switch ($currency) {
+        case 'VND':
+            $currency_symbol = 'vnđ';
+            break;
+    }
+    return $currency_symbol;
+}
