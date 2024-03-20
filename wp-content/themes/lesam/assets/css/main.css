@@ -2548,7 +2548,8 @@ body {
     line-height: 1.2;
     padding: 10px;
     position: relative;
-    text-align: center
+    text-align: center;
+    text-decoration: none;
 }
 
 .nav-tabs li a:before,.nav-tabs li button:before {

@@ -25,7 +25,7 @@ if (empty($product) || !$product->is_visible()) {
     return;
 }
 ?>
-<div class="col-lg-3 col-md-4 col-6 sp-col pb-22">
+<div class="<?php echo is_single() ? 'item col-12 col-sm-6 pb-30' : 'col-lg-3 col-md-4 col-6 sp-col pb-22' ?>">
     <article class="article-product product-box text-center h-100">
         <?php
         echo '<figure>';
@@ -60,6 +60,9 @@ if (empty($product) || !$product->is_visible()) {
             </header>
             <div class="dscription"><?php echo get_field('trong_luong') ? 'Trọng lượng: ' . get_field('trong_luong') : '' ?></div>
         </div>
+        <a href="#" value="<?php echo get_the_ID() ?>" class="single_add_to_cart_button" data-product_id="<?php echo get_the_ID() ?>" data-product_sku="" aria-label="Add “Nhân hạt Macca HAPPY NUTS 500gr” to your cart"> 
+			<div class="bag"></div>
+		</a>
         <?php
         /**
          * Hook: woocommerce_shop_loop_item_title.
@@ -74,7 +77,7 @@ if (empty($product) || !$product->is_visible()) {
          * @hooked woocommerce_template_loop_product_link_close - 5
          * @hooked woocommerce_template_loop_add_to_cart - 10
          */
-        do_action('woocommerce_after_shop_loop_item');
+        // do_action('woocommerce_after_shop_loop_item');
         ?>
     </article>
 </div>
