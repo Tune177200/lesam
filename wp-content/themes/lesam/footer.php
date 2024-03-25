@@ -59,7 +59,7 @@
             </div>
             <div class="col-xl-3 col-sm-6 col-6 sp-col fcol-3">
                 <h4>Trợ giúp</h4>
-                <?php echo lesam_menu('footer-menu', 'flist', ''); ?>
+                <?php echo lesam_menu('footer-menu-2', 'flist', ''); ?>
             </div>
             <div class="col-xl-3 col-sm-6 sp-col fcol-4">
                 <h4>Liên hệ</h4>

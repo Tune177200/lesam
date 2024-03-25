@@ -44,13 +44,11 @@ if (!empty($attachment_ids)) { ?>
             <div class="slider-for">
                 <?php
                 if ($post_thumbnail_id) {
-                    // $html = wc_get_gallery_image_html($post_thumbnail_id, true);
                     $html = '<div class="1">
                         <div class="item" style="width: 100%; display: inline-block;">
                             <figure><img class="w-100" src="' . wp_get_attachment_image_src($post_thumbnail_id)[0] . '" alt=""></figure>
                         </div>
                     </div>';
-                    // $html = '<div data-thumb="' . esc_url( $thumbnail_src[0] ) . '" data-thumb-alt="' . esc_attr( $alt_text ) . '" class="woocommerce-product-gallery__image"><a href="' . esc_url( $full_src[0] ) . '">' . $image . '</a></div>';
 
                 } else {
                     $html  = '<div class="woocommerce-product-gallery__image--placeholder">';
@@ -69,7 +67,6 @@ if (!empty($attachment_ids)) { ?>
             <div class="slider-nav">
                 <?php
                 if ($post_thumbnail_id) {
-                    // $html = wc_get_gallery_image_html($post_thumbnail_id, true);
                     $html = '<div class="3">
                         <div class="item" style="width: 100%; display: inline-block;">
                             <figure><img class="w-100" src="' . wp_get_attachment_image_src($post_thumbnail_id)[0] . '" alt=""></figure>
@@ -90,9 +87,7 @@ if (!empty($attachment_ids)) { ?>
     </div>
 <?php } else {
     if ($post_thumbnail_id) {
-        // $html = wc_get_gallery_image_html($post_thumbnail_id, true);
         $html = '<img class="w-100" src="' . wp_get_attachment_image_src($post_thumbnail_id)[0] . '" alt="">';
-        // $html = '<div data-thumb="' . esc_url( $thumbnail_src[0] ) . '" data-thumb-alt="' . esc_attr( $alt_text ) . '" class="woocommerce-product-gallery__image"><a href="' . esc_url( $full_src[0] ) . '">' . $image . '</a></div>';
 
     } else {
         $html  = '<div class="woocommerce-product-gallery__image--placeholder">';
@@ -105,23 +100,3 @@ if (!empty($attachment_ids)) { ?>
     do_action('woocommerce_product_thumbnails');
 }
 ?>
-
-
-<?php /*
-<div class="<?php echo esc_attr(implode(' ', array_map('sanitize_html_class', $wrapper_classes))); ?>" data-columns="<?php echo esc_attr($columns); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-    <div class="woocommerce-product-gallery__wrapper">
-        <?php
-        if ($post_thumbnail_id) {
-            $html = wc_get_gallery_image_html($post_thumbnail_id, true);
-        } else {
-            $html  = '<div class="woocommerce-product-gallery__image--placeholder">';
-            $html .= sprintf('<img src="%s" alt="%s" class="wp-post-image" />', esc_url(wc_placeholder_img_src('woocommerce_single')), esc_html__('Awaiting product image', 'woocommerce'));
-            $html .= '</div>';
-        }
-
-        echo apply_filters('woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
-
-        do_action('woocommerce_product_thumbnails');
-        ?>
-    </div>
-</div>*/ ?>

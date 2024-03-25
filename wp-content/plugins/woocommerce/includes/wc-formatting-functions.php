@@ -232,7 +232,7 @@ function wc_trim_zeros( $price ) {
  * @return float
  */
 function wc_round_tax_total( $value, $precision = null ) {
-	$precision = is_null( $precision ) ? wc_get_price_decimals() : intval( $precision );
+	$precision   = is_null( $precision ) ? wc_get_price_decimals() : intval( $precision );
 	$rounded_tax = NumberUtil::round( $value, $precision, wc_get_tax_rounding_mode() ); // phpcs:ignore PHPCompatibility.FunctionUse.NewFunctionParameters.round_modeFound
 
 	return apply_filters( 'wc_round_tax_total', $rounded_tax, $value, $precision, WC_TAX_ROUNDING_MODE );
@@ -371,15 +371,17 @@ function wc_format_coupon_code( $value ) {
 /**
  * Sanitize a coupon code.
  *
- * Uses sanitize_post_field since coupon codes are stored as
- * post_titles - the sanitization and escaping must match.
+ * Uses sanitize_post_field since coupon codes are stored as post_titles - the sanitization and escaping must match.
+ *
+ * Due to the unfiltered_html captability that some (admin) users have, we need to account for slashes.
  *
  * @since  3.6.0
  * @param  string $value Coupon code to format.
  * @return string
  */
 function wc_sanitize_coupon_code( $value ) {
-	return wp_filter_kses( sanitize_post_field( 'post_title', $value ?? '', 0, 'db' ) );
+	$value = wp_kses( sanitize_post_field( 'post_title', $value ?? '', 0, 'db' ), 'entities' );
+	return current_user_can( 'unfiltered_html' ) ? $value : stripslashes( $value );
 }
 
 /**
@@ -609,7 +611,7 @@ function wc_price( $price, $args = array() ) {
 	}
 
 	$formatted_price = ( $negative ? '-' : '' ) . sprintf( $args['price_format'], '<span class="woocommerce-Price-currencySymbol">' . get_woocommerce_currency_symbol( $args['currency'] ) . '</span>', $price );
-	$return          = '<span class="woocommerce-Price-amount amount 1"><bdi>' . $formatted_price . '</bdi></span>';
+	$return          = '<span class="woocommerce-Price-amount amount"><bdi>' . $formatted_price . '</bdi></span>';
 
 	if ( $args['ex_tax_label'] && wc_tax_enabled() ) {
 		$return .= ' <small class="woocommerce-Price-taxLabel tax_label">' . WC()->countries->ex_tax_or_vat() . '</small>';

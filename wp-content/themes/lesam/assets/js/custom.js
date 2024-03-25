@@ -88,46 +88,78 @@ jQuery(document).on('click', '.single_add_to_cart_button', function (e) {
 });
 
 
-// jQuery(document).ready(function ($) {
-//     var woocommerce_form = $('.woocommerce-cart-form');
-//     woocommerce_form.on('change', '.qty', function () {
-//         form = $(this).closest('form');
+jQuery(document).ready(function ($) {
 
-//         // emulates button Update cart click
-//         $("<input type='hidden' name='update_cart' id='update_cart' value='1'>").appendTo(form);
+    jQuery(".group-amount .arrow").on("click",function(event){
+        event.preventDefault();
+        var countAmount = jQuery(this).parent().find("input").val();
+        if(jQuery(this).hasClass("arrow-minus")){
+            countAmount--;
+            if(countAmount < 1){
+                countAmount = 1;
+            }
+        }else{
+            countAmount++;
+        }
+        jQuery(this).parent().find("input").val(countAmount);
 
-//         // get the form data before disable button...
-//         formData = form.serialize();
+    });
 
-//         // disable update cart and proceed to checkout buttons before send ajax request
-//         $("input[name='update_cart']").val('Updating…').prop('disabled', true);
-//         $("a.checkout-button.wc-forward").addClass('disabled').html('Updating…');
+    var woocommerce_form = $('.woocommerce-cart-form');
+    woocommerce_form.on('change', '.qty', function () {
+        form = $(this).closest('form');
 
-//         // update cart via ajax
-//         $.post(form.attr('action'), formData, function (resp) {
-//             // get updated data on response cart
-//             var shop_table = $('table.shop_table.cart', resp).html();
-//             var cart_totals = $('.cart_totals', resp).html();
+        // emulates button Update cart click
+        $("<input type='hidden' name='update_cart' id='update_cart' value='1'>").appendTo(form);
+        var newQuantity = $(this).val();
+        // get the form data before disable button...
+        formData = form.serialize();
 
-//             // replace current data by updated data
-//             $('.woocommerce-cart-form table.shop_table.cart')
-//                 .html(shop_table)
-//                 .find('.qty')
-//                 .before('<input type="button" value="-" class="minus">')
-//                 .after('<input type="button" value="+" class="plus">');
-//             $('.cart_totals').html(cart_totals);
-//         });
-//     }).on('click', '.quantity input.minus', function () {
-//         var current = $(this).next('.qty').val();
-//         current--;
-//         $(this).next('.qty').val(current).trigger('change');
-//     }).on('click', '.quantity input.plus', function () {
-//         var current = $(this).prev('.qty').val();
-//         current++;
-//         $(this).prev('.qty').val(current).trigger('change');
-//     })
+        // disable update cart and proceed to checkout buttons before send ajax request
+        $("input[name='update_cart']").val('Updating…').prop('disabled', true);
+        $("a.checkout-button.wc-forward").addClass('disabled').html('Updating…');
 
-//     $('.woocommerce-cart').on('click', "a.checkout-button.wc-forward.disabled", function (e) {
-//         e.preventDefault();
-//     });
-// });
+        // update cart via ajax
+        $.post(form.attr('action'), formData, function (resp) {
+            // get updated data on response cart
+            var shop_table = $('table.shop_table.cart', resp).html();
+            var cart_totals = $('.cart_totals', resp).html();
+
+            // replace current data by updated data
+            $('.woocommerce-cart-form table.shop_table.cart')
+                .html(shop_table)
+                .find('.qty')
+                .before('<input type="button" value="-" class="minus">')
+                .after('<input type="button" value="+" class="plus">');
+            $('.cart_totals').html(cart_totals);
+        });
+    }).on('click', '.quantity input.minus', function () {
+        var current = $(this).next('.qty').val();
+        current--;
+        $(this).next('.qty').val(current).trigger('change');
+    }).on('click', '.quantity input.plus', function () {
+        var current = $(this).prev('.qty').val();
+        current++;
+        $(this).prev('.qty').val(current).trigger('change');
+    })
+
+    $('.woocommerce-cart').on('click', "a.checkout-button.wc-forward.disabled", function (e) {
+        e.preventDefault();
+    });
+});
+
+jQuery(document).on('click', '.btn-variant-item', function (e) {
+    e.preventDefault();
+    var jQuerythisbutton = jQuery(this);
+    var variantPrice  = parseInt(this.dataset.price);
+    var variantId  = parseInt(this.dataset.variant_id);
+    var formatter = new Intl.NumberFormat('vi-VN', {
+        style: 'currency',
+        currency: 'VND',
+      });
+    jQuery('.btn-variant-item').removeClass('active');
+    jQuery(this).addClass('active');
+    jQuery('.product-intro div.price').html(this.dataset.price);
+    jQuery('input[name=variation_id]').val(variantId);
+    return false;
+});

@@ -22,16 +22,12 @@
                     <a class="icoinfo" href="<?php echo $header['link_email']; ?>"><i class="far fa-envelope"></i> <?php echo $header['email']; ?></a>
                     <a class="btn-control-notext" href="#qsearch"><i class="fas fa-search"></i></a>
                     <div id="qsearch" class="qsearch">
-                        <form class="aws-search-form aws-show-clear" action="<?php echo home_url() ?>" method="get" role="search">
-                            <div class="aws-wrapper">
-                                <input type="search" name="s" value="" placeholder="Search">
-                            </div>
-                        </form>
+                        <?php echo do_shortcode('[aws_search_form]') ?>
                     </div>
-                    <a class="headcart" href="https://happynuts.vn/gio-hang">
+                    <a class="headcart" href="<?php echo wc_get_cart_url() ?>">
                         <span class="headincart">
                             <i class="fas fa-cart-plus"></i>
-                            <span class="number">0</span>
+                            <span class="number"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
                         </span>
                     </a>
                 </div>
