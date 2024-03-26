@@ -1083,6 +1083,7 @@ body {
     background: rgba(247, 247, 247, 0.5);
     box-shadow: inset 0px 1px 3px rgba(0,0,0,0.25);
     border-radius: 33px;
+    overflow: hidden;
 }
 .header-container.fixhead {
     box-shadow: rgba(0,0,0,0.16) 0 0 5px
@@ -4130,7 +4131,7 @@ body {
     content: "";
     height: 2px;
     left: 50%;
-    margin-left: -22px;
+    transform: translateX(-50%);
     position: absolute;
     width: 44px
 }
@@ -6639,7 +6640,14 @@ body {
 }
 
 .product-content .dscription {
-    padding-bottom: 5px
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+@media (max-width: 1024px) {
+    .product-content .dscription {
+        padding-bottom: 10px;
+    }
 }
 
 .woocommerce ul#shipping_method .amount {
@@ -6838,6 +6846,8 @@ li.woocommerce-mini-cart-item {
     top: 5px;
     right: 10px
 }
+
+
 
 @media only screen and (max-width: 768px) {
     .p-1530 {

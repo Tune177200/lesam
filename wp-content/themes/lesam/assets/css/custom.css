@@ -138,6 +138,7 @@ h3.yentu{
 }
 .pagination{
     justify-content: center;
+    width: 100%;
 }
 .single-post-content, .contact-page {
     background: #FFFFFF;
@@ -148,6 +149,11 @@ h3.yentu{
 .entry-thumbnail img {
     width: 100%;
 }
+.aws-search-field, .aws-container .aws-search-field:focus {
+    background: rgba(247, 247, 247, 0.5);
+    border: none !important;
+}
+
 @media (max-width: 991px) {
     .list__term--item {
         width: calc(100% / 4 - 20px);

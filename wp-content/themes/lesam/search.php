@@ -2,17 +2,17 @@
 get_header();
 $term = get_queried_object();
 
-
 echo '<main class="main-wrap" style="padding-bottom: 286.188px; padding-top: 108.391px;">'; ?>
 
-
-
 <?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 $args = array(
     'post_type' => 'product',
-    's' => 'vi',
+    's' => $_GET['s'],
     'post_status' => 'publish',
-    'posts_per_page' => -1,
+    'posts_per_page' => get_option('posts_per_page'),
+    'paged'          => $paged,
 );
 $q = new WP_Query($args);
 
@@ -21,15 +21,6 @@ echo '<div class="pt-30">';
 echo '<div class="container">';
 echo '<div class="box-border gtype">';
 if ($q->have_posts()) {
-
-    // /**
-    //  * Hook: woocommerce_before_shop_loop.
-    //  *
-    //  * @hooked woocommerce_output_all_notices - 10
-    //  * @hooked woocommerce_result_count - 20
-    //  * @hooked woocommerce_catalog_ordering - 30
-    //  */
-    // do_action('woocommerce_before_shop_loop');
 
     woocommerce_product_loop_start();
 
@@ -44,6 +35,7 @@ if ($q->have_posts()) {
 
         wc_get_template_part('content', 'product');
     }
+    echo pagination_lesam($q);
 
     woocommerce_product_loop_end();
 
