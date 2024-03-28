@@ -90,15 +90,15 @@ jQuery(document).on('click', '.single_add_to_cart_button', function (e) {
 
 jQuery(document).ready(function ($) {
 
-    jQuery(".group-amount .arrow").on("click",function(event){
+    jQuery(".group-amount .arrow").on("click", function (event) {
         event.preventDefault();
         var countAmount = jQuery(this).parent().find("input").val();
-        if(jQuery(this).hasClass("arrow-minus")){
+        if (jQuery(this).hasClass("arrow-minus")) {
             countAmount--;
-            if(countAmount < 1){
+            if (countAmount < 1) {
                 countAmount = 1;
             }
-        }else{
+        } else {
             countAmount++;
         }
         jQuery(this).parent().find("input").val(countAmount);
@@ -151,15 +151,20 @@ jQuery(document).ready(function ($) {
 jQuery(document).on('click', '.btn-variant-item', function (e) {
     e.preventDefault();
     var jQuerythisbutton = jQuery(this);
-    var variantPrice  = parseInt(this.dataset.price);
-    var variantId  = parseInt(this.dataset.variant_id);
+    var variantPrice = parseInt(this.dataset.price);
+    var variantId = parseInt(this.dataset.variant_id);
     var formatter = new Intl.NumberFormat('vi-VN', {
         style: 'currency',
         currency: 'VND',
-      });
+    });
     jQuery('.btn-variant-item').removeClass('active');
     jQuery(this).addClass('active');
     jQuery('.product-intro div.price').html(this.dataset.price);
     jQuery('input[name=variation_id]').val(variantId);
     return false;
+});
+
+jQuery("#placeOrder").click(function () {
+    console.log(111);
+    jQuery("#fcheckout").submit();
 });

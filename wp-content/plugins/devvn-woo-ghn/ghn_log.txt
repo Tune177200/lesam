@@ -1,0 +1,180 @@
+User: ::1 - March 28, 2024, 7:19 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:19 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:19 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:19 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:19 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:19 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:19 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:19 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------
+User: ::1 - March 28, 2024, 7:20 am
+Array
+(
+    [code] => 401
+    [message] => Token is required!
+    [data] => 
+)
+
+-------------------------

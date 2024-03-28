@@ -240,3 +240,21 @@ function formatPrice($product, $price)
 
     return $a;
 }
+
+function test($fieldset){
+
+    $fieldset['order']['order_comments']['type'] = 'text';
+    $fieldset['order']['order_comments']['placeholder'] = 'Nhập ghi Chú đơn hàng';
+    
+    return $fieldset;
+}
+add_filter('woocommerce_checkout_fields', 'test');
+
+
+function test2($field, $key, $args, $value){
+    
+    $args['class'][0] = 'form-row-wide';
+ 
+    return $args;
+}
+add_filter('woocommerce_form_field_text', 'test2', 10, 4 );
