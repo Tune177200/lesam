@@ -2082,7 +2082,7 @@ body {
     position: absolute;
     z-index: 1
 }
-
+/* 
 .box-border .slick-prev {
     left: -40px;
     padding-right: 4px
@@ -2101,7 +2101,7 @@ body {
 .box-border .slick-next::after {
     right: 22px;
     left: -1px
-}
+} */
 
 .slick-arrow-cicle .slick-arrow,.list-customer .slick-arrow {
     background: #fff;
@@ -7013,4 +7013,7 @@ form.woocommerce-form-coupon {
 }
 .toast-message a, .toast-message label{
     color: #fff;
+}
+.section__camnang .section__camnang--block a img {
+    width: 100%;
 }

@@ -141,6 +141,35 @@ jQuery(".slick-5").slick({
   ]
 });
 
+jQuery(".slick-6").slick({
+  autoplay: true,
+  autoplaySpeed: 2500,
+  speed: 700,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+      slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 640,
+      settings: {
+      slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 474,
+      settings: {
+      slidesToShow: 2,
+      }
+    }
+  ]
+});
+
 jQuery(".slider-vertical").each(function(e){
   var idSlider = "slider-vertical-"+ e;
   jQuery(this).attr("id", idSlider);

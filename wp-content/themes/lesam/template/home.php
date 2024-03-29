@@ -113,36 +113,38 @@ get_header();
                 <br>
             </div>
             <?php if (!empty($intro_3['product'])) { ?>
-                <div class="slick-4">
-                    <?php foreach ($intro_3['product'] as $itemProduct) {
-                        $idProduct = $itemProduct->ID;
-                        $product = wc_get_product($idProduct); ?>
-                        <div>
-                            <div class="item h-100 pb-22" style="width: 100%; display: inline-block;">
-                                <article class="article-product product-box text-center h-100">
-                                    <figure><a href="<?php echo get_permalink($idProduct); ?>" tabindex="-1"><img src="<?php echo get_the_post_thumbnail_url($idProduct) ?>" alt="<?php echo get_the_title($idProduct) ?>"></a></figure>
-                                    <div class="product-content">
-                                        <header>
-                                            <h4><a href="<?php echo get_permalink($idProduct); ?>" tabindex="-1"><?php echo get_the_title($idProduct) ?></a></h4>
-                                            <p class="price"><strong><?php echo formatPrice($product, $product->get_price()) ?></strong></p>
-                                        </header>
-                                        <?php
-                                        if (get_field('trong_luong', $idProduct)) {
-                                            echo '<div class="dscription">Trọng lượng: ' . get_field('trong_luong', $idProduct) . '</div>';
-                                        }
+                <div class="box-border">
+                    <div class="slick-4">
+                        <?php foreach ($intro_3['product'] as $itemProduct) {
+                            $idProduct = $itemProduct->ID;
+                            $product = wc_get_product($idProduct); ?>
+                            <div>
+                                <div class="item h-100 pb-22" style="width: 100%; display: inline-block;">
+                                    <article class="article-product product-box text-center h-100">
+                                        <figure><a href="<?php echo get_permalink($idProduct); ?>" tabindex="-1"><img src="<?php echo get_the_post_thumbnail_url($idProduct) ?>" alt="<?php echo get_the_title($idProduct) ?>"></a></figure>
+                                        <div class="product-content">
+                                            <header>
+                                                <h4><a href="<?php echo get_permalink($idProduct); ?>" tabindex="-1"><?php echo get_the_title($idProduct) ?></a></h4>
+                                                <p class="price"><strong><?php echo formatPrice($product, $product->get_price()) ?></strong></p>
+                                            </header>
+                                            <?php
+                                            if (get_field('trong_luong', $idProduct)) {
+                                                echo '<div class="dscription">Trọng lượng: ' . get_field('trong_luong', $idProduct) . '</div>';
+                                            }
 
-                                        if (get_field('khoi_luong', $idProduct)) {
-                                            echo '<p>Khối lượng: ' . get_field('khoi_luong', $idProduct) . '</p>';
-                                        }
-                                        ?>
-                                    </div>
-                                    <a href="#" value="<?php echo $idProduct; ?>" class="single_add_to_cart_button" data-product_id="<?php echo $idProduct; ?>" data-product_sku="" aria-label="Add “<?php echo get_the_title($idProduct) ?>” to your cart" tabindex="-1">
-                                        <div class="bag"></div>
-                                    </a>
-                                </article>
+                                            if (get_field('khoi_luong', $idProduct)) {
+                                                echo '<p>Khối lượng: ' . get_field('khoi_luong', $idProduct) . '</p>';
+                                            }
+                                            ?>
+                                        </div>
+                                        <a href="#" value="<?php echo $idProduct; ?>" class="single_add_to_cart_button" data-product_id="<?php echo $idProduct; ?>" data-product_sku="" aria-label="Add “<?php echo get_the_title($idProduct) ?>” to your cart" tabindex="-1">
+                                            <div class="bag"></div>
+                                        </a>
+                                    </article>
+                                </div>
                             </div>
-                        </div>
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
                 </div>
             <?php } ?>
         </div>

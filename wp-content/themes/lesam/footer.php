@@ -1,4 +1,26 @@
 <?php $footer = get_field('footer', 'option'); ?>
+
+<div class="intro-home-8" style="padding-bottom: 0;">
+    <div class="container">
+        <div class="intro text-center pb-30">
+            <h2 class="title-3"><?php echo $footer['doi_tac']['title'] ?></h2>
+        </div>
+        <?php
+        if (!empty($footer['doi_tac']['list_doi_tac'])) { ?>
+            <div class="slick-6 hfull-slick text-center list-parents">
+                <?php foreach ($footer['doi_tac']['list_doi_tac'] as $itemBao) { ?>
+                    <div>
+                        <div>
+                            <div class="item" style="width: 100%; display: inline-block;">
+                                <figure><a href="<?php echo !empty($itemBao['link']['url']) ? $itemBao['link']['url'] : '#' ?>" tabindex="-1"><img src="<?php echo !empty($itemBao['logo']['url']) ? $itemBao['logo']['url'] : '' ?>"></a></figure>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        <?php } ?>
+    </div>
+</div>
 <div class="section__news intro-home-3">
     <div class="container">
 
