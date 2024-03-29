@@ -48,23 +48,48 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
                 <?php do_action('woocommerce_checkout_after_customer_details'); ?>
 
             <?php endif; ?>
+            <div class="wrap-cart">
+                <?php do_action('woocommerce_checkout_before_order_review_heading'); ?>
+                <div class="cart-heading"><span class="color1">THANH TOÁN</span></div>
 
-            <?php do_action('woocommerce_checkout_before_order_review_heading'); ?>
+                <?php do_action('woocommerce_checkout_before_order_review'); ?>
 
-            <h3 id="order_review_heading"><?php esc_html_e('Your order', 'woocommerce'); ?></h3>
+                <div class="cart-body p-1530">
+                    <div class="form-inputb">
+                        <?php woocommerce_checkout_payment(); ?>
+                    </div>
 
-            <?php do_action('woocommerce_checkout_before_order_review'); ?>
+                </div>
 
-            <div id="order_review" class="woocommerce-checkout-review-order">
-                <?php do_action('woocommerce_checkout_order_review'); ?>
+                <?php do_action('woocommerce_checkout_after_order_review'); ?>
             </div>
-
-            <?php do_action('woocommerce_checkout_after_order_review'); ?>
-
         </form>
     </div>
     <div class="item col-lg-4">
+        <div class="wrap-cart">
+            <div class="cart-heading plr-15"><span class="text-uppercase color1">Đơn hàng</span> (4 sản phẩm)</div>
+            <div class="cart-body plr-15">
+                <?php woocommerce_order_review(); ?>
+            </div>
+        </div>
+        <div class="btn-submit">
+            <noscript>
+                <?php
+                /* translators: $1 and $2 opening and closing emphasis tags respectively */
+                printf(esc_html__('Since your browser does not support JavaScript, or it is disabled, please ensure you click the %1$sUpdate Totals%2$s button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'woocommerce'), '<em>', '</em>');
+                ?>
+                <br /><button type="submit" class="button alt<?php echo esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : ''); ?>" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e('Update totals', 'woocommerce'); ?>"><?php esc_html_e('Update totals', 'woocommerce'); ?></button>
+            </noscript>
 
+            <?php do_action('woocommerce_review_order_before_submit'); ?>
+
+            <?php echo apply_filters('woocommerce_order_button_html', '<button type="submit" id="placeOrder" class="btn-pay w-100" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr($order_button_text) . '" data-value="' . esc_attr($order_button_text) . '">Thanh toán</button>'); // @codingStandardsIgnoreLine 
+            ?>
+
+            <?php do_action('woocommerce_review_order_after_submit'); ?>
+
+            <?php wp_nonce_field('woocommerce-process_checkout', 'woocommerce-process-checkout-nonce'); ?>
+        </div>
     </div>
 </div>
 

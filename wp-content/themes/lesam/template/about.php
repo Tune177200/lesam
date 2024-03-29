@@ -64,7 +64,7 @@
                         <?php foreach ($information['list_information'] as $itemInf) { ?>
                             <div class="col-md-4 sp-col">
                                 <figure>
-                                    <img src="<?php echo !empty($itemInf['icon']['icon']) ? $itemInf['icon']['icon'] : '' ?>" alt="<?php echo $itemInf['title'] ?>">
+                                    <img src="<?php echo !empty($itemInf['icon']['url']) ? $itemInf['icon']['url'] : '' ?>" alt="<?php echo $itemInf['title'] ?>">
                                 </figure>
                                 <h3><?php echo $itemInf['title'] ?></h3>
                                 <p><?php echo $itemInf['description'] ?></p>
