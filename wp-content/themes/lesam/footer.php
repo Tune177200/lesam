@@ -108,6 +108,18 @@
         </div>
     </div>
 </footer>
+<a href="#toppage" class="gotop" style="display: none;"><i class="fa-solid fa-chevron-up"></i></a>
+<div id="mobile-contact-bar">
+    <div id="mobile-contact-bar-outer">
+        <ul>
+            <li><a data-rel="external" href="https://www.google.com/maps/place/Happy+Nuts/@10.8388709,106.6632625,18z/data=!4m9!1m2!2m1!1shappynuts!3m5!1s0x3175292a26241097:0x203aa124126aa53d!8m2!3d10.8386778!4d106.6652905!15sCgloYXBweW51dHOSARFmb29kX21hbnVmYWN0dXJlcuABAA"><span class="fa-stack fa-lg"><i class="fa-fw fas fa-map-marker-alt"></i><span class="screen-reader-text">Google Maps</span></span></a></li>
+            <li><a data-rel="external" href="https://zalo.me/545515008956267293?gidzl=nv_XR7YIiIFDYUbiSekn8SIEx6jjZ-Dssuo_RMtTvNVRZBnlFuxaTTpTlcvfs-OcsTwvEpA7DMbvSvsz8m"><span class="fa-stack fa-lg"><i class="fa-fw fas fa-comment-dots"></i><span class="screen-reader-text">Zalo</span></span></a></li>
+            <li><a data-rel="external" href="tel:+84985023463"><span class="fa-stack fa-lg"><i class="fa-fw fas fa-phone"></i><span class="screen-reader-text">Phone Number for calling</span></span></a></li>
+            <li><a data-rel="external" href="http://m.me/happynuts.com.vn"><span class="fa-stack fa-lg"><i class="fa-fw fab fa-facebook-f"></i><span class="screen-reader-text">Facebook</span></span></a></li>
+            <li><a data-rel="external" href="sms:+84985023463"><span class="fa-stack fa-lg"><i class="fa-fw far fa-comment"></i><span class="screen-reader-text">Phone Number for texting</span></span></a></li>
+        </ul>
+    </div>
+</div>
 <?php wp_footer(); ?>
 <?php //lesam_menu('footer-menu', 'flist') 
 ?>

@@ -7017,3 +7017,98 @@ form.woocommerce-form-coupon {
 .section__camnang .section__camnang--block a img {
     width: 100%;
 }
+
+#mobile-contact-bar {
+    box-sizing: border-box;
+    display: block;
+    font-size: 100%;
+    font-size: 1rem;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    z-index: 9998;
+}
+
+#mobile-contact-bar:before,#mobile-contact-bar:after {
+    content: "";
+    display: table;
+}
+
+#mobile-contact-bar:after {
+    clear: both;
+}
+
+#mobile-contact-bar-outer {
+    background-color: #f15f25;
+    box-sizing: border-box;
+    height: 50px;
+    overflow: hidden;
+    width: 100%;
+}
+
+#mobile-contact-bar ul {
+    box-sizing: border-box;
+    line-height: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#mobile-contact-bar ul li {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 50px;
+    width: 70px;
+}
+
+#mobile-contact-bar ul li a {
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    position: relative;
+    z-index: 9998;
+}
+
+#mobile-contact-bar ul li a:active,#mobile-contact-bar ul li a:focus {
+    outline: none;
+}
+
+.fa-stack {
+    height: 2em;
+    line-height: 2em;
+    width: 2em;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.mobile-contact-bar-badge {
+    background-color: #c86414;
+    border-radius: 100%;
+    color: #ffffff;
+    display: block;
+    font-size: 0.5em;
+    height: 1.5em;
+    width: 1.5em;
+    line-height: 1.5;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-indent: 0;
+}
+
+#mobile-contact-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}

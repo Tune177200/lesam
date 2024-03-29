@@ -224,3 +224,19 @@ jQuery(".slider-vertical").each(function(e){
     ]
   });
 });
+
+jQuery(window).scroll(function() {
+  var stickyTop = jQuery(this).scrollTop();
+  if (stickyTop > 20) {
+    jQuery('.gotop').show();
+    jQuery('.header-container').addClass('fixhead');
+  } else {
+    jQuery('.gotop').hide();
+    jQuery('.header-container').removeClass('fixhead');
+  }
+});
+
+$('.gotop').click(function(){
+  $("html, body").animate({ scrollTop: 0 }, 600);
+  return false;
+});
