@@ -109,20 +109,43 @@
     </div>
 </footer>
 <a href="#toppage" class="gotop" style="display: none;"><i class="fa-solid fa-chevron-up"></i></a>
-<div id="mobile-contact-bar">
-    <div id="mobile-contact-bar-outer">
-        <ul>
-            <li><a data-rel="external" href="https://www.google.com/maps/place/Happy+Nuts/@10.8388709,106.6632625,18z/data=!4m9!1m2!2m1!1shappynuts!3m5!1s0x3175292a26241097:0x203aa124126aa53d!8m2!3d10.8386778!4d106.6652905!15sCgloYXBweW51dHOSARFmb29kX21hbnVmYWN0dXJlcuABAA"><span class="fa-stack fa-lg"><i class="fa-fw fas fa-map-marker-alt"></i><span class="screen-reader-text">Google Maps</span></span></a></li>
-            <li><a data-rel="external" href="https://zalo.me/545515008956267293?gidzl=nv_XR7YIiIFDYUbiSekn8SIEx6jjZ-Dssuo_RMtTvNVRZBnlFuxaTTpTlcvfs-OcsTwvEpA7DMbvSvsz8m"><span class="fa-stack fa-lg"><i class="fa-fw fas fa-comment-dots"></i><span class="screen-reader-text">Zalo</span></span></a></li>
-            <li><a data-rel="external" href="tel:+84985023463"><span class="fa-stack fa-lg"><i class="fa-fw fas fa-phone"></i><span class="screen-reader-text">Phone Number for calling</span></span></a></li>
-            <li><a data-rel="external" href="http://m.me/happynuts.com.vn"><span class="fa-stack fa-lg"><i class="fa-fw fab fa-facebook-f"></i><span class="screen-reader-text">Facebook</span></span></a></li>
-            <li><a data-rel="external" href="sms:+84985023463"><span class="fa-stack fa-lg"><i class="fa-fw far fa-comment"></i><span class="screen-reader-text">Phone Number for texting</span></span></a></li>
-        </ul>
+<?php $button_contact = get_field('button_contact', 'option'); ?>
+<div class="hotline-phone-ring-wrap">
+    <div class="hotline-phone-ring">
+        <div class="hotline-phone-ring-circle"></div>
+        <div class="hotline-phone-ring-circle-fill"></div>
+        <div class="hotline-phone-ring-img-circle">
+            <a href="<?php echo $button_contact['tel'] ?>" class="pps-btn-img">
+                <img data-lazyloaded="1" src="<?php echo !empty($button_contact['icon_tel']['url']) ? $button_contact['icon_tel']['url'] : get_stylesheet_directory_uri() . '/assets/images/icon/icon-1.png' ?>" width="50" class="litespeed-loaded" data-was-processed="true">
+            </a>
+        </div>
+    </div>
+    <div class="hotline-bar">
+        <a href="<?php echo $button_contact['tel'] ?>">
+            <span class="text-hotline"><?php echo $button_contact['title_tel'] ?></span>
+        </a>
     </div>
 </div>
+<div class="zalo-container left">
+    <a id="zalo-btn" href="<?php echo $button_contact['zalo'] ?>" target="_blank" rel="noopener noreferrer nofollow">
+        <div class="animated_zalo infinite zoomIn_zalo cmoz-alo-circle"></div>
+        <div class="animated_zalo infinite pulse_zalo cmoz-alo-circle-fill"></div>
+        <span>
+            <img src="<?php echo !empty($button_contact['icon_zalo']['url']) ? $button_contact['icon_zalo']['url'] : get_stylesheet_directory_uri() . '/assets/images/icon/zalo-2.png' ?>" class="litespeed-loaded" data-was-processed="true">
+        </span>
+    </a>
+</div>
+<div class="facebook-container left">
+    <a id="zalo-btn" href="<?php echo $button_contact['facebook'] ?>" target="_blank" rel="noopener noreferrer nofollow">
+        <div class="animated_zalo infinite zoomIn_zalo cmoz-alo-circle"></div>
+        <div class="animated_zalo infinite pulse_zalo cmoz-alo-circle-fill"></div>
+        <span>
+            <img src="<?php echo !empty($button_contact['icon_facebook']['url']) ? $button_contact['icon_facebook']['url'] : get_stylesheet_directory_uri() . '/assets/images/icon/facebook.png' ?>" class="litespeed-loaded" data-was-processed="true">
+        </span>
+    </a>
+</div>
+
 <?php wp_footer(); ?>
-<?php //lesam_menu('footer-menu', 'flist') 
-?>
 </body>
 
 </html>
