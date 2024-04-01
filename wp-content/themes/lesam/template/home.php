@@ -213,7 +213,66 @@ get_header();
             </div>
         </div>
     <?php }
+    $doi_tac = get_field('doi_tac');
     ?>
+    <div class="intro-home-8" style="padding-bottom: 0; padding-top: 70px">
+        <div class="container">
+            <div class="intro text-center pb-30">
+                <h2 class="title-3"><?php echo $doi_tac['title'] ?></h2>
+            </div>
+            <?php
+            if (!empty($doi_tac['list_doi_tac'])) { ?>
+                <div class="slick-6 hfull-slick text-center list-parents">
+                    <?php foreach ($doi_tac['list_doi_tac'] as $itemBao) { ?>
+                        <div>
+                            <div>
+                                <div class="item" style="width: 100%; display: inline-block;">
+                                    <figure><a href="<?php echo !empty($itemBao['link']['url']) ? $itemBao['link']['url'] : '#' ?>" tabindex="-1"><img src="<?php echo !empty($itemBao['logo']['url']) ? $itemBao['logo']['url'] : '' ?>"></a></figure>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+    <?php $blog = get_field('blog'); ?>
+    <div class="section__news intro-home-3">
+        <div class="container">
+
+            <div class="section__news--content text-center mb-5">
+                <h3><?php echo $blog['title'] ?></h3>
+                <p><?php echo $blog['description'] ?></p>
+            </div>
+
+            <?php
+            if (!empty($blog['list_post'])) {
+                echo '<div class="slick-blog">';
+                foreach ($blog['list_post'] as $itemPost) {
+                    $idPost = $itemPost->ID ?>
+                    <div>
+                        <article class="article-blog text-center">
+                            <a href="<?php echo get_permalink($idPost); ?>">
+                                <div class="entry-head">
+                                    <img src="<?php echo get_the_post_thumbnail_url($idPost); ?>" class="entry-thumbnail">
+                                    <div class="post-date">
+                                        <div class="post-date-day"><?php echo get_the_date('d', $idPost); ?></div>
+                                        <div class="post-date-month"><?php echo get_the_date('M', $idPost); ?></div>
+                                    </div>
+                                </div>
+                                <h3 class="entry-title"><?php echo get_the_title($idPost); ?></h3>
+                                <p class="entry-content">
+                                    <?php echo get_the_excerpt($idPost); ?>
+                                </p>
+                            </a>
+                        </article>
+                    </div>
+            <?php }
+                echo '</div>';
+            }
+            ?>
+        </div>
+    </div>
 </main>
 <?php
 get_footer();
